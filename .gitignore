@@ -1,0 +1,3 @@
+# Prevent committing local Capital.com credentials
+.env
+

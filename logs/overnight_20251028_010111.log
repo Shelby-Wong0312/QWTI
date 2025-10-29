@@ -1,0 +1,57 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20251028010111
+Username: AP\niuji
+RunAs User: AP\niuji
+Configuration Name: 
+Machine: AP (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\run_overnight.ps1
+Process ID: 31796
+PSVersion: 5.1.26100.6899
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.6899
+BuildVersion: 10.0.26100.6899
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\logs\overnight_20251028_010111.log
+BASE_URL: https://demo-api-capital.backend-capital.com
+CST set: True
+XST set: True
+API_KEY set: False
+=== [1/5] GDELT backfill start ===
+
+=== [1/5] GDELT backfill done ===
+=== [2/5] GDELT hourly aggregation start ===
+
+=== [2/5] GDELT hourly aggregation done ===
+ts,art_cnt,tone_avg,tone_pos_ratio
+2024-01-01T00:00:00Z,0,0.0,0.5
+2024-01-01T01:00:00Z,0,0.0,0.5
+=== [3/5] term/crack/ovx rebuild start ===
+
+=== [3/5] term/crack/ovx rebuild done ===
+ts,cl1_cl2,crack_rb,crack_ho,ovx
+2019-02-19T00:00:00Z,0.0,,,
+2019-02-19T01:00:00Z,0.0,,,0.08071470456348522
+=== [4/5] EXP3 online re-run start ===
+
+=== [4/5] EXP3 online re-run done ===
+ts,w_raw,w_t,pnl_1h,equity_1h
+2019-02-19 12:00:00,0.0,0.0,-0.0,1.0
+2019-02-19 13:00:00,0.021081530281333118,0.0,-0.0,1.0
+=== [5/5] monitors start ===
+
+=== [5/5] monitors done ===
+now_ts,align_rate,miss_rate,dup_bars,illegal_values,lookahead_check
+2025-10-27T16:40:53Z,0.0006132774569428119,0.9993867225430572,0,66821,PASS
+2025-10-27T17:02:08Z,0.0006132774569428119,0.9993867225430572,0,66821,PASS
+now_ts,sharpe_annual,hit_rate,maxdd_7d,turnover_7d
+2025-10-27T16:40:53Z,1.648670591071777,0.10434782608695652,-0.002118969021176061,0.015574094449159246
+2025-10-27T17:02:08Z,1.648670591071777,0.10434782608695652,-0.002118969021176061,0.015574094449159246
+**********************
+Windows PowerShell transcript end
+End time: 20251028010208
+**********************
