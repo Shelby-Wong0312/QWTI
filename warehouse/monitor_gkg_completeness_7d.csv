@@ -1,0 +1,2 @@
+window_start_utc,window_end_utc,endpoint,raw_dir,expected_quarters,present_quarters,missing_quarters,present_quarters_ratio,expected_hours,hours_present,hours_present_ratio,hours_with_art,hours_with_tone,tone_hit_ratio_over_present_hours,downloaded_now,scanned_zip
+2025-10-23T15:00:00+00:00,2025-10-29T15:00:00+00:00,http://data.gdeltproject.org/gdeltv2/,C:\WTI\data\gdelt_raw,577,238,339,0.4125,145,45,0.3103,45,45,1.0,0,0

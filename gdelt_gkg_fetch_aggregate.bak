@@ -23,7 +23,7 @@ from requests import RequestException
 from tqdm import tqdm
 
 
-BASE_URL = "http://data.gdeltproject.org/gkg"
+BASE_URL = "https://data.gdeltproject.org/gkg"
 TONE_PATTERN = re.compile(r"^-?\d+(?:\.\d+)?,\d+,\d+,-?\d+(?:\.\d+)?,\d+,\d+$")
 URL_PATTERN = re.compile(r"^https?://", re.IGNORECASE)
 
@@ -275,5 +275,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
 
