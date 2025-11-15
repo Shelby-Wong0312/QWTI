@@ -10,6 +10,8 @@ __pycache__/
 *.csv
 *.bak
 warehouse/*.csv
+data/gdelt_raw/
+data/gdelt_hourly_monthly/
 
 # IDE
 .vscode/
