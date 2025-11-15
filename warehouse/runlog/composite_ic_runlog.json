@@ -1,0 +1,37 @@
+{
+  "stage": "composite_ic_done",
+  "inputs": {
+    "news_score_shadow": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\news_score_shadow.csv",
+    "features_hourly": "C:\\Users\\niuji\\Documents\\Data\\data\\features_hourly.parquet",
+    "monthly_glob": "C:\\Users\\niuji\\Documents\\Data\\data\\gdelt_hourly_monthly\\gdelt_hourly_*.parquet"
+  },
+  "params": {
+    "H_LIST": [
+      1,
+      2,
+      3,
+      6,
+      12
+    ],
+    "LAG_LIST": [
+      0,
+      1
+    ],
+    "TRAIN_DAYS": 60,
+    "TEST_DAYS": 30,
+    "WINSOR_Q": [
+      0.01,
+      0.99
+    ],
+    "HARD_GATE": {
+      "mapped_ratio": 0.55,
+      "ALL_art_cnt": 3
+    }
+  },
+  "outputs": {
+    "hard": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\composite_ic_hard_summary.csv",
+    "soft": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\composite_ic_soft_summary.csv",
+    "alpha_hard": "alpha_candidates_hard_composite.csv",
+    "alpha_soft": "alpha_candidates_soft_composite.csv"
+  }
+}

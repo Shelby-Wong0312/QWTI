@@ -1,0 +1,75 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "No-Drift Contract",
+  "type": "object",
+  "required": ["invariants","hard_gate","hard_ic","kpi_reporting","source_selection","promotion_demotion","shadow_rules","logging"],
+  "properties": {
+    "invariants": {
+      "type": "object",
+      "properties": {
+        "timezone": {"const":"UTC"},
+        "align_to_next_full_hour": {"const": true},
+        "trading_kpi_only": {"const": true},
+        "non_trading_ret_1h_zero": {"const": true}
+      },
+      "required": ["timezone","align_to_next_full_hour","trading_kpi_only","non_trading_ret_1h_zero"]
+    },
+    "hard_gate": {
+      "type": "object",
+      "properties": {
+        "mapped_ratio_min": {"type":"number","minimum":0.55},
+        "all_art_cnt_min": {"type":"integer","minimum":3},
+        "require_tone_avg_nonnull": {"const": true}
+      },
+      "required": ["mapped_ratio_min","all_art_cnt_min","require_tone_avg_nonnull"]
+    },
+    "hard_ic": {
+      "type": "object",
+      "properties": {
+        "horizons_h": {"type":"array","items":{"enum":[1,2,3]}},
+        "lag_hours": {"const": 1},
+        "thresholds": {
+          "type":"object",
+          "properties": {
+            "ic_median_min": {"type":"number","minimum":0.02},
+            "ir_min": {"type":"number","minimum":0.5},
+            "pos_month_ratio_min": {"type":"number","minimum":0.55}
+          },
+          "required": ["ic_median_min","ir_min","pos_month_ratio_min"]
+        }
+      },
+      "required": ["horizons_h","lag_hours","thresholds"]
+    },
+    "kpi_reporting": {
+      "type": "object",
+      "properties": {
+        "official_source": {"const":"hard_only"},
+        "include_soft_in_research_only": {"const": true}
+      },
+      "required": ["official_source","include_soft_in_research_only"]
+    },
+    "source_selection": {
+      "type":"object",
+      "properties": {
+        "selected_source": {"enum":["base","shadow"]},
+        "allow_shadow_to_trade": {"const": false}
+      },
+      "required": ["selected_source","allow_shadow_to_trade"]
+    },
+    "shadow_rules": {
+      "type":"object",
+      "properties": {
+        "allow_soft_ic": {"const": true},
+        "allow_experiment_composites": {"const": true}
+      },
+      "required": ["allow_soft_ic","allow_experiment_composites"]
+    },
+    "logging": {
+      "type":"object",
+      "properties": {
+        "runlog_required": {"const": true}
+      },
+      "required": ["runlog_required"]
+    }
+  }
+}

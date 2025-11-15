@@ -1,0 +1,111 @@
+﻿# No-Drift Contract (WTI  GDELT)  v1.0
+meta:
+  policy_name: No-Drift Contract
+  version: 1.0
+  owner: "WTIGKG pipeline"
+  last_update_utc: "__FILL_ON_SAVE__"
+
+scope:
+  applies_to:
+    - data/aggregation
+    - features/alignment
+    - alpha/ic_evaluation
+    - weighting/production
+  not_applicable_to:
+    - exploratory_notebooks
+    - one-off diagnostics
+
+invariants:  # 永不修改的硬規範
+  timezone: "UTC"
+  align_to_next_full_hour: true
+  trading_kpi_only: true              # KPI 只計 is_trading_hour=True
+  non_trading_ret_1h_zero: true       # 非交易小時 ret_1h=0 只作對齊
+  join_key: "ts_utc"
+  merge_rule: "left_join"
+
+hard_gate:   # 資料品質 Gate（任何策略/評分前必須滿足）
+  mapped_ratio_min: 0.55
+  all_art_cnt_min: 3
+  require_tone_avg_nonnull: true
+  drop_windows_with_skip_ratio_over: 0.02   # RAW 解析壞行比例>2% 的時段不入 Hard
+
+hard_ic:     # 上線門票（短窗、含 1h 延遲）
+  horizons_h: [1,2,3]
+  lag_hours: 1
+  ic_stat: "Spearman"
+  thresholds:
+    ic_median_min: 0.02
+    ir_min: 0.5
+    pos_month_ratio_min: 0.55
+
+kpi_reporting:  # 正式報表與看板只看 Hard
+  official_source: "hard_only"
+  include_soft_in_research_only: true
+  report_gross_and_net: true
+  cost_bps_grid: [1,3,5]
+
+source_selection:  # 生效權重來源鎖
+  selected_source: "base"          # base | shadow
+  allow_shadow_to_trade: false
+  log_field: "selected_source"
+
+promotion_demotion:  # 升降級機制（可回退）
+  promote_to_base_when:
+    consecutive_test_windows_min: 2
+    meets_hard_ic_thresholds: true
+    lag_safety_ok: true         # lag=1h不崩
+  demote_to_shadow_when:
+    hard_ic_falls_below_thresholds: true
+    or_coverage_quality_drops: true
+    or_risk_limits_breached: true
+
+data_sourcing:   # 單一事實來源與檔位
+  gdelt_monthly_sot: "data/gdelt_hourly_monthly/gdelt_hourly_YYYY-MM.parquet"
+  gdelt_total_sot:   "data/gdelt_hourly.parquet"
+  features_sot:      "data/features_hourly.parquet"
+  raw_gkg_root:      "data/gdelt_raw/YYYY/MM/*.gkg.csv.zip"
+  theme_map:         "warehouse/theme_map.json"
+  normalized_rule:   "multi_label_1_over_k"
+  conservation_check: "ALL ≈ sum(buckets_norm) + OTHER_norm"
+
+shadow_rules:  # 研究層的允許行為（永不進正式KPI/下單）
+  allow_soft_ic: true
+  allow_cov_score_scaling: true
+  allow_experiment_composites: true
+  allow_bucket_precision_rules: true
+  allow_event_weighting: true
+  shadow_outputs_tag: "_shadow"
+  must_not_update: ["w_final", "monitor_signals_summary(KPI_hard)"]
+
+logging:  # 可審計
+  runlog_required: true
+  runlog_fields:
+    - stage
+    - inputs
+    - params
+    - thresholds
+    - invariants_version
+    - selected_source
+    - outputs
+    - samples
+    - notes
+
+risk_limits:
+  max_weight_abs: 0.30
+  deadband_pct: 0.03
+  max_dweight_pct: 0.15
+
+enforcement:  # 執行前/後檢查（腳本須先驗再跑）
+  preflight_checks:
+    - "assert timezone==UTC"
+    - "assert align_to_next_full_hour==true"
+    - "assert hard_gate.mapped_ratio_min <= observed_mapped_ratio"
+    - "assert hard_gate.all_art_cnt_min <= observed_all_art_cnt"
+    - "assert hard_ic.lag_hours==1 for production gating"
+  postrun_checks:
+    - "assert KPI_official_from==hard_only"
+    - "assert selected_source in ['base'] for live weights"
+    - "assert conservation_residual0 (tolerance 1e-6)"
+
+notes:
+  - "任何臨時放寬只可於 shadow_rules 範圍內進行，且不得修改 hard_gate / hard_ic / kpi_reporting。"

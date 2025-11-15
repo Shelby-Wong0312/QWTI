@@ -1,0 +1,15 @@
+{
+  "stage": "oil_precision_ic_done_v2",
+  "used_fallback_monthly": true,
+  "skip_thresholds": {
+    "yellow": 0.01,
+    "red": 0.02
+  },
+  "outputs": {
+    "readlog": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\runlog\\oil_precision_readlog.csv",
+    "hard_summary": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\ic_oil_core_hard_summary.csv",
+    "soft_summary": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\ic_oil_core_soft_summary.csv",
+    "alpha_hard": "alpha_candidates_oil_hard.csv",
+    "alpha_soft": "alpha_candidates_oil_soft.csv"
+  }
+}

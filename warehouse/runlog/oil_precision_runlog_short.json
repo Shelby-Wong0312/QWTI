@@ -1,0 +1,30 @@
+{
+  "stage": "oil_precision_ic_done_v2_2_event_short",
+  "used_fallback_monthly": true,
+  "short_focus": {
+    "H_LIST": [
+      1,
+      2,
+      3
+    ],
+    "LAG_LIST": [
+      1
+    ]
+  },
+  "event_weight": {
+    "current_hour": 1.3,
+    "neighbor_pm3h": 1.15
+  },
+  "score_threshold": 1.5,
+  "skip_thresholds": {
+    "yellow": 0.01,
+    "red": 0.02
+  },
+  "outputs": {
+    "readlog": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\runlog\\oil_precision_readlog.csv",
+    "hard_summary_short": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\ic_oil_core_hard_summary_short.csv",
+    "soft_summary_short": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\ic_oil_core_soft_summary_short.csv",
+    "alpha_hard_short": "alpha_candidates_oil_hard_short.csv",
+    "alpha_soft_short": "alpha_candidates_oil_soft_short.csv"
+  }
+}

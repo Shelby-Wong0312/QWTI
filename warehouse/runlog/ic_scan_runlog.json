@@ -1,0 +1,77 @@
+{
+  "stage": "ic_scan_done_norm_gate_v4",
+  "inputs": {
+    "gdelt_hourly_total": "C:\\Users\\niuji\\Documents\\Data\\data\\gdelt_hourly.parquet",
+    "gdelt_hourly_month_glob": "C:\\Users\\niuji\\Documents\\Data\\data\\gdelt_hourly_monthly\\gdelt_hourly_*.parquet",
+    "features_hourly": "C:\\Users\\niuji\\Documents\\Data\\data\\features_hourly.parquet"
+  },
+  "used_month_stack": true,
+  "synth_all_norm": true,
+  "params": {
+    "H_LIST": [
+      1,
+      2,
+      3,
+      6,
+      12
+    ],
+    "LAG_LIST": [
+      0,
+      1
+    ],
+    "TRAIN_DAYS": 60,
+    "TEST_DAYS": 30,
+    "WINSOR_Q": [
+      0.01,
+      0.99
+    ],
+    "GATE_ON": true,
+    "GATE_MAPPED_TH": 0.55,
+    "GATE_ALL_ARTCNT_TH": 3
+  },
+  "detected_bucket_features": {
+    "oil_core_art_cnt": "OIL_CORE_norm_art_cnt",
+    "oil_core_tone_avg": "OIL_CORE_norm_tone_avg",
+    "oil_core_tone_pos_ratio": "OIL_CORE_norm_tone_pos_ratio",
+    "oil_core_topic_cnt": "OIL_CORE_norm_topic_cnt",
+    "geopol_art_cnt": "GEOPOL_norm_art_cnt",
+    "geopol_tone_avg": "GEOPOL_norm_tone_avg",
+    "geopol_tone_pos_ratio": "GEOPOL_norm_tone_pos_ratio",
+    "geopol_topic_cnt": "GEOPOL_norm_topic_cnt",
+    "usd_rate_art_cnt": "USD_RATE_norm_art_cnt",
+    "usd_rate_tone_avg": "USD_RATE_norm_tone_avg",
+    "usd_rate_tone_pos_ratio": "USD_RATE_norm_tone_pos_ratio",
+    "usd_rate_topic_cnt": "USD_RATE_norm_topic_cnt",
+    "supply_chain_art_cnt": "SUPPLY_CHAIN_norm_art_cnt",
+    "supply_chain_tone_avg": "SUPPLY_CHAIN_norm_tone_avg",
+    "supply_chain_tone_pos_ratio": "SUPPLY_CHAIN_norm_tone_pos_ratio",
+    "supply_chain_topic_cnt": "SUPPLY_CHAIN_norm_topic_cnt",
+    "macro_art_cnt": "MACRO_norm_art_cnt",
+    "macro_tone_avg": "MACRO_norm_tone_avg",
+    "macro_tone_pos_ratio": "MACRO_norm_tone_pos_ratio",
+    "macro_topic_cnt": "MACRO_norm_topic_cnt",
+    "esg_policy_art_cnt": "ESG_POLICY_norm_art_cnt",
+    "esg_policy_tone_avg": "ESG_POLICY_norm_tone_avg",
+    "esg_policy_tone_pos_ratio": "ESG_POLICY_norm_tone_pos_ratio",
+    "esg_policy_topic_cnt": "ESG_POLICY_norm_topic_cnt"
+  },
+  "synth_all_norm_cols": {
+    "ALL_norm_art_cnt_synth": "?(bucket_art_cnt_norm [+ OTHER])",
+    "ALL_norm_topic_cnt_synth": "?(bucket_topic_cnt_norm [+ OTHER])",
+    "ALL_norm_tone_avg_synth": "???tone_avg_norm  art_cnt_norm",
+    "ALL_norm_tone_pos_ratio_synth": "???tone_pos_ratio_norm  art_cnt_norm"
+  },
+  "gate_stats": {
+    "gate_pass_ratio": 0.04670549274865821,
+    "mapped_ratio_median": 0.0
+  },
+  "outputs": {
+    "ic_full": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\ic_full.parquet",
+    "ic_summary": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\ic_summary.csv"
+  },
+  "samples": {
+    "ic_full_rows": 280,
+    "summary_rows": 280,
+    "month_rows": 280
+  }
+}

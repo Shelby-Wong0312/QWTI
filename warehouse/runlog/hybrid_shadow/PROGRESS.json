@@ -1,0 +1,12 @@
+{
+  "stage": "done",
+  "total_windows": 6,
+  "pct": 100,
+  "outputs": {
+    "ic_hard_summary": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\ic_hard_summary.csv",
+    "ic_soft_summary": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\ic_soft_summary.csv",
+    "alpha_candidates_hard": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\alpha_candidates_hard.csv",
+    "alpha_candidates_soft": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\alpha_candidates_soft.csv",
+    "live_weights_shadow": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\live_weights_shadow.csv"
+  }
+}

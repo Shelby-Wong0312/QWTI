@@ -1,0 +1,37 @@
+{
+  "stage": "composite5_ridge_short_done_stable",
+  "params": {
+    "H_LIST": [
+      1,
+      2,
+      3
+    ],
+    "LAG": 1,
+    "TRAIN_DAYS": 60,
+    "TEST_DAYS": 30,
+    "WINSOR_Q": [
+      0.01,
+      0.99
+    ],
+    "RIDGE_L2_INIT": 1.0
+  },
+  "thresholds": {
+    "SOFT": {
+      "ic": 0.025,
+      "IR": 0.6
+    },
+    "HARD": {
+      "ic": 0.02,
+      "IR": 0.5,
+      "pmr": 0.55
+    },
+    "MAPPED_TH": 0.55,
+    "ALL_ARTCNT_TH": 3
+  },
+  "outputs": {
+    "soft_summary": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\composite5_ridge_soft_summary_short.csv",
+    "soft_alpha": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\alpha_candidates_composite5_ridge_soft_short.csv",
+    "hard_summary": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\composite5_ridge_hard_summary_short.csv",
+    "hard_alpha": "C:\\Users\\niuji\\Documents\\Data\\warehouse\\ic\\alpha_candidates_composite5_ridge_hard_short.csv"
+  }
+}
