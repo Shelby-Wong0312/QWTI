@@ -1,3 +1,16 @@
 # Prevent committing local Capital.com credentials
 .env
 
+# 虛擬環境 / 快取
+.venv/
+__pycache__/
+*.pyc
+
+# 資料輸出與中間檔
+*.csv
+*.bak
+warehouse/*.csv
+
+# IDE
+.vscode/
+.idea/

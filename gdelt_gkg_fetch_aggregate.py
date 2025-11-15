@@ -4,6 +4,13 @@ Bulk download and aggregate GDELT 2.1 GKG 15-minute feeds into hourly features.
 """
 from __future__ import annotations
 
+# --- No-Drift preflight ---
+from pathlib import Path
+import sys
+sys.path.insert(0, r"C:\Users\niuji\Documents\Data\warehouse\policy\utils")
+from nodrift_preflight import enforce
+# --- End preflight ---
+
 import argparse
 import math
 import re
@@ -12,7 +19,6 @@ import warnings
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
-from pathlib import Path
 from typing import Iterable, Iterator, Optional
 import zipfile
 
@@ -230,6 +236,34 @@ def process_jobs(jobs: list[Job], chunk_hours: int) -> tuple[pd.DataFrame, int]:
     return hourly, parsed_files
 
 
+def build_observed_metrics(
+    hourly_df: pd.DataFrame,
+    start_ts: datetime,
+    end_ts: datetime,
+    available_files: int,
+    parsed_files: int,
+) -> dict[str, float]:
+    """Derive coverage/quality stats for No-Drift enforcement."""
+    end_hour = end_ts.replace(minute=0, second=0, microsecond=0)
+    total_hours = (
+        int(((end_hour - start_ts).total_seconds() / 3600) + 1) if end_hour >= start_ts else 0
+    )
+    mapped_ratio = float(len(hourly_df) / total_hours) if total_hours > 0 else 0.0
+    all_art_cnt = float(hourly_df["art_cnt"].median()) if not hourly_df.empty else 0.0
+    tone_nonnull = bool(not hourly_df.empty and hourly_df["tone_avg"].notna().all())
+    if available_files <= 0:
+        skip_ratio = 1.0
+    else:
+        skip_ratio = max(0.0, 1.0 - (parsed_files / available_files))
+    return dict(
+        mode="hard_kpi",
+        mapped_ratio=mapped_ratio,
+        all_art_cnt=all_art_cnt,
+        tone_nonnull=tone_nonnull,
+        skip_ratio=skip_ratio,
+    )
+
+
 def main() -> None:
     args = parse_args()
 
@@ -259,6 +293,9 @@ def main() -> None:
     hourly_df, parsed_files = process_jobs(jobs, args.chunk_hours)
     print(f"[INFO] Parsed files with data: {parsed_files}")
     print(f"[INFO] Hourly rows produced: {len(hourly_df)}")
+
+    observed = build_observed_metrics(hourly_df, start_ts, end_ts, available_files, parsed_files)
+    enforce(observed)
 
     out_parquet = Path(args.out_parquet)
     out_csv = Path(args.out_csv)

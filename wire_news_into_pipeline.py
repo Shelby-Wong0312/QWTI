@@ -5,7 +5,13 @@ feature set for the online experiment pipeline.
 """
 from __future__ import annotations
 
+# --- No-Drift preflight ---
 from pathlib import Path
+import sys
+sys.path.insert(0, r"C:\Users\niuji\Documents\Data\warehouse\policy\utils")
+from nodrift_preflight import enforce
+# --- End preflight ---
+
 from typing import Iterable
 
 import numpy as np
@@ -103,6 +109,30 @@ def report_news_coverage(features: pd.DataFrame) -> None:
     print(f"[INFO] News column non-null ratios -> {coverage_str}")
 
 
+def enforce_no_drift(coverage_snapshot: pd.DataFrame, price_rows: int) -> None:
+    """Run the policy preflight using observed coverage metrics."""
+    mapped_ratio = float(len(coverage_snapshot) / price_rows) if price_rows else 0.0
+    art_col = "news_art_cnt"
+    if art_col in coverage_snapshot.columns and not coverage_snapshot.empty:
+        all_art_cnt = float(coverage_snapshot[art_col].median())
+    else:
+        all_art_cnt = 0.0
+    tone_col = "news_tone_avg"
+    tone_nonnull = bool(
+        tone_col in coverage_snapshot.columns
+        and not coverage_snapshot.empty
+        and coverage_snapshot[tone_col].notna().all()
+    )
+    observed = dict(
+        mode="hard_kpi",
+        mapped_ratio=mapped_ratio,
+        all_art_cnt=all_art_cnt,
+        tone_nonnull=tone_nonnull,
+        skip_ratio=0.0,
+    )
+    enforce(observed)
+
+
 def main() -> None:
     price = load_price()
     price_rows = len(price)
@@ -117,6 +147,7 @@ def main() -> None:
     merged = merged.sort_values("ts").reset_index(drop=True)
 
     coverage_snapshot = merged.copy()
+    enforce_no_drift(coverage_snapshot, price_rows)
 
     for col in ("news_tone_avg", "news_tone_pos_ratio"):
         if col in merged.columns:

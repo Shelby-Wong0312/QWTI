@@ -1,4 +1,2 @@
-window,rows,zero_ratio,turnover,note
-7d,168,0.0,3.402860136833872,with_news:gdelt
-30d,720,0.0,3.625019404259194,with_news:gdelt
-90d,1437,0.0160055671537926,2.3976342199663225,with_news:gdelt
+﻿rows,Sharpe_h_gross,Sharpe_h_net,Sharpe_d_gross,Sharpe_d_net,Win_h,Win_d,Turnover_h,Turnover_d,mean_abs_w,std_abs_w,note
+112,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,with_news:gdelt | ts_utc dtype fixed (both UTC datetimes)
