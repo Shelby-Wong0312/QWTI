@@ -1,0 +1,2 @@
+=== RUNLOG 2025-11-06 15:12:52Z ===
+Files: C:\Users\niuji\Documents\Data\data\features_hourly.parquet, C:\Users\niuji\Documents\Data\warehouse\live_weights.csv, C:\Users\niuji\Documents\Data\warehouse\signals_hourly_exp3.csv, C:\Users\niuji\Documents\Data\warehouse\monitor_signals_summary.csv, C:\Users\niuji\Documents\Data\warehouse\explain_latest.md, C:\Users\niuji\Documents\Data\warehouse\explain_latest_signal_corr.csv
