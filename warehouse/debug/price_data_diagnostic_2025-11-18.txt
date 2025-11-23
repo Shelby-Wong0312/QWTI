@@ -1,0 +1,169 @@
+================================================================================
+PRICE DATA DIAGNOSTIC REPORT
+Generated: 2025-11-18
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+IC evaluation failed due to insufficient real price data. The fundamental issue
+is NOT with data processing, but with data availability:
+
+- Longest continuous segment with non-null ret_1h: 178 hours (7.4 days)
+- Required for 90-day window: 2,160 hours (90 days)
+- Data gap: 1,982 hours (82.6 days) SHORT
+
+Even the available "trading data" is 96.2% zeros, leaving only 111 hours
+(1.3% of dataset) with actual price movement.
+
+
+DETAILED FINDINGS
+-----------------
+
+## 1. Overall Dataset Statistics
+
+Total rows: 8,757 hours (365 days)
+Date range: 2024-10-29 13:00:00+00:00 to 2025-10-29 09:00:00+00:00
+
+ret_1h Distribution:
+  - Null (no data):      5,875 hours (67.1%)
+  - Zero (no movement):  2,771 hours (31.6%)
+  - Non-zero (trading):    111 hours ( 1.3%)
+
+## 2. Continuous Segments Analysis
+
+Top 5 continuous segments (non-null ret_1h only):
+
+1. 178 hours (7.4 days)
+   2025-10-22 00:00:00 to 2025-10-29 09:00:00
+
+2. 49 hours (2.0 days)
+   2025-10-03 22:00:00 to 2025-10-05 22:00:00
+
+3. 49 hours (2.0 days)
+   2025-10-17 22:00:00 to 2025-10-19 22:00:00
+
+4. 49 hours (2.0 days)
+   2025-10-10 22:00:00 to 2025-10-12 22:00:00
+
+5. 49 hours (2.0 days)
+   2024-11-29 22:00:00 to 2024-12-01 22:00:00
+
+## 3. IC Evaluation Requirements vs Reality
+
+Required for 90-day rolling window:
+  - Train: 60 days (1,440 hours)
+  - Test: 30 days (720 hours)
+  - Total: 90 days (2,160 hours) continuous
+
+Available:
+  - Longest segment: 178 hours (8.2% of required)
+  - Gap: 1,982 hours (91.8% SHORT)
+
+## 4. Zero Returns Problem
+
+Within the 2,882 non-null trading hours:
+  - Zero returns: 2,771 (96.2%)
+  - Non-zero: 111 (3.8%)
+
+This extreme concentration of zeros means:
+  - Forward return variance ≈ 0
+  - IC calculation impossible (std(y_pred) = 0, std(y_true) = 0)
+  - No signal to evaluate
+
+
+ATTEMPTED FIX AND FAILURE
+--------------------------
+
+Attempted Fix:
+  Filled null ret_1h with 0 to bring "coverage" to 100%
+
+Why It Failed:
+  1. Created artificial "continuous segment" of 8,757 hours (all timestamps)
+  2. This segment was 98.7% zeros (only filled data)
+  3. IC evaluation selected this as "longest segment"
+  4. All forward returns = 0 → zero variance → no IC
+
+Lesson:
+  Filling missing data with zeros does NOT create usable trading data.
+  The evaluation needs REAL price movements, not filled zeros.
+
+
+ROOT CAUSE ANALYSIS
+-------------------
+
+The price data source (features_hourly.parquet) appears to be:
+
+1. Incomplete Coverage
+   - Only 32.9% of hours have any price data
+   - 67.1% completely missing
+
+2. Low Volatility or Data Quality Issue
+   - 96.2% of "trading" hours have zero returns
+   - This is highly unusual for WTI crude oil futures
+   - Suggests either:
+     a) Data processing error in ret_1h calculation
+     b) Wrong asset/contract being tracked
+     c) Non-trading hours incorrectly labeled as trading hours
+
+3. Insufficient History
+   - Longest usable segment is only 7.4 days
+   - Need at least 90 days continuous
+   - 12x more data required
+
+
+RECOMMENDATIONS
+---------------
+
+1. IMMEDIATE: Investigate price data source
+   - Verify data/features_hourly.parquet generation process
+   - Check if ret_1h calculation is correct
+   - Confirm asset/contract (should be WTI CL continuous front month)
+
+2. Data Acquisition
+   - Obtain at least 120 days of continuous trading data
+   - Verify data quality (non-zero returns during trading hours)
+   - Ensure proper trading hour identification
+
+3. Evaluation Strategy
+   - DO NOT fill missing data with zeros for IC evaluation
+   - Use only periods with real trading data
+   - Consider reducing window size if 90 days unavailable (with proper disclosure)
+
+4. Alternative Approaches
+   - If 90-day continuous unavailable, use shorter windows (e.g., 30-day train/15-day test)
+   - Document deviation from Hard threshold requirements
+   - Run evaluation on multiple shorter segments and aggregate results
+
+
+TECHNICAL DETAILS
+-----------------
+
+Files:
+  - Original: data/features_hourly.parquet.backup (restored as current)
+  - Filled (failed): data/features_hourly.parquet (discarded)
+
+Evaluation Script:
+  - evaluate_composite_ic_v2.py
+  - Lines 127-129: Dynamic window sizing based on available data
+  - Line 178: Variance check (std > 0) fails due to all-zero data
+
+Debug Output:
+  y_pred: mean=0.000000, std=0.000000 (all zeros)
+  y_true: mean=0.000000, std=0.000000 (all zeros)
+  Result: IC calculation skipped, no valid windows
+
+
+CONCLUSION
+----------
+
+The IC evaluation cannot proceed with current price data. This is a fundamental
+data availability issue requiring:
+
+1. Investigation of price data source quality
+2. Acquisition of sufficient continuous trading data (≥90 days)
+3. Verification of ret_1h calculation correctness
+
+Filling missing hours with zeros is NOT a viable solution as it creates
+artificial segments with no predictive signal.
+
+================================================================================

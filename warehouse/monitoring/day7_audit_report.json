@@ -1,0 +1,115 @@
+{
+  "review_date": "2025-11-19T17:48:57.202708",
+  "review_type": "Day-7 First Performance Review",
+  "status": "EXCELLENT",
+  "hard_gates": {
+    "gates": {
+      "ic_median_gate": {
+        "threshold": 0.02,
+        "description": "IC median >= 0.02",
+        "status": "PASS",
+        "value": 0.1233965961745776
+      },
+      "ir_gate": {
+        "threshold": 0.5,
+        "description": "IR >= 0.5",
+        "status": "PASS",
+        "value": 6.338040246148552
+      },
+      "pmr_gate": {
+        "threshold": 0.55,
+        "description": "PMR >= 0.55",
+        "status": "PASS",
+        "value": 1.0
+      }
+    },
+    "overall_status": "PASS",
+    "metrics_15d": {
+      "window_hours": 360,
+      "window_days": 15.0,
+      "n_observations": 25,
+      "ic_mean": 0.12287830848379352,
+      "ic_median": 0.1233965961745776,
+      "ic_std": 0.019387429506851617,
+      "ir": 6.338040246148552,
+      "pmr": 1.0,
+      "ic_min": 0.0809705857175949,
+      "ic_max": 0.1582850940137738
+    },
+    "metrics_30d": {
+      "window_hours": 720,
+      "window_days": 30.0,
+      "n_observations": 25,
+      "ic_mean": 0.12287830848379352,
+      "ic_median": 0.1233965961745776,
+      "ic_std": 0.019387429506851617,
+      "ir": 6.338040246148552,
+      "pmr": 1.0,
+      "ic_min": 0.0809705857175949,
+      "ic_max": 0.1582850940137738
+    },
+    "metrics_60d": {
+      "window_hours": 1440,
+      "window_days": 60.0,
+      "n_observations": 25,
+      "ic_mean": 0.12287830848379352,
+      "ic_median": 0.1233965961745776,
+      "ic_std": 0.019387429506851617,
+      "ir": 6.338040246148552,
+      "pmr": 1.0,
+      "ic_min": 0.0809705857175949,
+      "ic_max": 0.1582850940137738
+    },
+    "metrics_available": {
+      "window_hours": 25,
+      "window_days": 1.0416666666666667,
+      "n_observations": 25,
+      "ic_mean": 0.12287830848379352,
+      "ic_median": 0.1233965961745776,
+      "ic_std": 0.019387429506851617,
+      "ir": 6.338040246148552,
+      "pmr": 1.0,
+      "ic_min": 0.0809705857175949,
+      "ic_max": 0.1582850940137738
+    }
+  },
+  "drawdown": {
+    "max_drawdown": 0.0,
+    "max_drawdown_pct": 0.0,
+    "max_drawdown_date": "2025-11-18T16:04:56.876797",
+    "current_drawdown": 0.0,
+    "current_drawdown_pct": 0.0,
+    "cumulative_ic": 3.0719577120948376,
+    "in_drawdown": "False"
+  },
+  "positions": {
+    "n_records": 25,
+    "mean_position": 0.024098079785311345,
+    "std_position": 0.10657467144943696,
+    "min_position": -0.15,
+    "max_position": 0.15,
+    "utilization_pct": 30.198978462953242,
+    "n_max_long": 0,
+    "n_max_short": 0,
+    "pct_extremes": 0.0,
+    "avg_turnover": 0.1097407850819117,
+    "max_turnover": 0.3
+  },
+  "alerts": {
+    "total_alerts": 1,
+    "alert_counts": {},
+    "recent_alerts_24h": 1,
+    "status": "WARNINGS_PRESENT"
+  },
+  "data_integrity": {
+    "status": "CLEAN",
+    "issues": [],
+    "n_metrics_records": 25,
+    "n_position_records": 25
+  },
+  "summary": {
+    "health_score": 90,
+    "overall_status": "EXCELLENT",
+    "review_complete": true
+  }
+}

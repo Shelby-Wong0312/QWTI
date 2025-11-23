@@ -1,0 +1,3 @@
+usage: gdelt_gkg_bucket_aggregator.py [-h] --start START --end END
+                                      [--raw-dir RAW_DIR] [--out-dir OUT_DIR]
+gdelt_gkg_bucket_aggregator.py: error: unrecognized arguments:    

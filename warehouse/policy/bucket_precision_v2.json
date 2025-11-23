@@ -1,0 +1,102 @@
+{
+  "version": "2.0",
+  "created": "2025-11-18",
+  "parent": "v1_precision (keyword tightening)",
+  "rationale": "v2策略 - 在v1关键词基础上加入tone filtering和co-occurrence filtering",
+
+  "USD_RATE": {
+    "strategy": "USD strength signals with negative sentiment filter",
+    "keywords": {
+      "inherit_from_v1": [
+        "EPU_CATS_MONETARY_POLICY",
+        "INTEREST_RATE",
+        "FED",
+        "DOLLAR_INDEX",
+        "DXY"
+      ]
+    },
+    "tone_filter": {
+      "enabled": true,
+      "threshold": -1.0,
+      "condition": "tone < -1.0",
+      "rationale": "只保留负面tone文章(鹰派Fed/美元走强压制油价)",
+      "expected_reduction": "进一步降低30-50% (从v1的100篇/小时降至50-70篇/小时)"
+    },
+    "co_occurrence_filter": {
+      "enabled": false,
+      "rationale": "USD_RATE与油价关联较直接,不需要co-occurrence过滤"
+    }
+  },
+
+  "GEOPOL": {
+    "strategy": "Oil-relevant geopolitical conflicts with severe negative sentiment + OIL co-occurrence",
+    "keywords": {
+      "inherit_from_v1": [
+        "SANCTIONS",
+        "ARMEDCONFLICT",
+        "TERROR",
+        "CEASEFIRE",
+        "MISSILE",
+        "STRIKE",
+        "IRAN_",
+        "IRAQ_",
+        "SAUDI",
+        "RUSSIA_UKRAINE",
+        "OPEC_MEETING",
+        "MIDDLE_EAST_",
+        "STRAIT"
+      ]
+    },
+    "tone_filter": {
+      "enabled": true,
+      "threshold": -2.0,
+      "condition": "tone < -2.0",
+      "rationale": "只保留严重负面tone文章(冲突升级/供应风险)",
+      "expected_reduction": "降低40-60%"
+    },
+    "co_occurrence_filter": {
+      "enabled": true,
+      "require_any_of": [
+        "OIL_",
+        "WTI",
+        "BRENT",
+        "CRUDE",
+        "OPEC",
+        "ENERGY_OIL"
+      ],
+      "rationale": "地缘政治新闻必须同时提及石油才相关",
+      "expected_reduction": "降低60-80% (from v1的250篇/小时降至50-100篇/小时)"
+    }
+  },
+
+  "OTHER_BUCKETS": {
+    "note": "OIL_CORE, SUPPLY_CHAIN, MACRO, ESG_POLICY保持v1关键词,无额外filtering"
+  },
+
+  "implementation": {
+    "step1": "修改gdelt_gkg_bucket_aggregator.py添加filter_config支持",
+    "step2": "在extract_fields()中添加tone/co-occurrence filtering逻辑",
+    "step3": "创建warehouse/filter_config_v2.json配置filtering规则",
+    "step4": "重新聚合所有月度数据(2024-10 to 2025-10)",
+    "step5": "重建gdelt_hourly.parquet",
+    "step6": "重跑IC评估(H=1/2/3, lag=1h)",
+    "technical_notes": {
+      "tone_filtering": "在parse_zip()阶段对每篇文章应用tone threshold",
+      "co_occurrence": "检查文章themes是否包含OIL_相关关键词",
+      "apply_time": "filtering在bucket mapping之后,统计聚合之前"
+    }
+  },
+
+  "expected_outcomes": {
+    "USD_RATE_target": "50-70 articles/hour (vs v1: 100, v0: 163)",
+    "GEOPOL_target": "50-100 articles/hour (vs v1: 250, v0: 1,851)",
+    "noise_reduction": "相比v1进一步降低50-70%噪音",
+    "IC_improvement": "目标: H=3 IC从-0.0076提升至正值(≥0.02)",
+    "PMR_improvement": "目标: PMR从0.5提升至≥0.55",
+    "Hard_threshold": "突破IC≥0.02 ∧ IR≥0.5 ∧ PMR≥0.55"
+  },
+
+  "filter_logic": {
+    "pseudo_code": "for each article:\n  1. Extract tone, themes\n  2. Map themes to buckets (v1 keywords)\n  3. For each matched bucket:\n     IF bucket == 'USD_RATE' AND tone_filter_enabled:\n       IF tone is None OR tone >= -1.0: SKIP this bucket\n     IF bucket == 'GEOPOL' AND filters_enabled:\n       IF tone is None OR tone >= -2.0: SKIP this bucket\n       IF no OIL_ theme in article: SKIP this bucket\n  4. Aggregate remaining bucket matches"
+  }
+}

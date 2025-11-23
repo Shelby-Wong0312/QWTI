@@ -1,0 +1,54 @@
+{
+  "version": "2.0",
+  "note": "Bucket filtering rules for precision v2",
+
+  "USD_RATE": {
+    "tone_filter": {
+      "enabled": true,
+      "threshold": -1.0,
+      "operator": "<"
+    },
+    "co_occurrence": {
+      "enabled": false
+    }
+  },
+
+  "GEOPOL": {
+    "tone_filter": {
+      "enabled": true,
+      "threshold": -2.0,
+      "operator": "<"
+    },
+    "co_occurrence": {
+      "enabled": true,
+      "require_any_of": [
+        "OIL_",
+        "WTI",
+        "BRENT",
+        "CRUDE",
+        "OPEC",
+        "ENERGY_OIL"
+      ]
+    }
+  },
+
+  "OIL_CORE": {
+    "tone_filter": {"enabled": false},
+    "co_occurrence": {"enabled": false}
+  },
+
+  "SUPPLY_CHAIN": {
+    "tone_filter": {"enabled": false},
+    "co_occurrence": {"enabled": false}
+  },
+
+  "MACRO": {
+    "tone_filter": {"enabled": false},
+    "co_occurrence": {"enabled": false}
+  },
+
+  "ESG_POLICY": {
+    "tone_filter": {"enabled": false},
+    "co_occurrence": {"enabled": false}
+  }
+}

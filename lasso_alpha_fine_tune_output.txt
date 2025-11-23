@@ -1,0 +1,458 @@
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+C:\Users\niuji\Documents\Data\.venv\Lib\site-packages\numpy\lib\_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+================================================================================
+Lasso Alpha Fine-Tuning + Stability Validation
+================================================================================
+Goal: Push H=1 IC from 0.0190 to >=0.02 (Hard threshold)
+Strategy: Alpha search [0.005, 0.0075, 0.01, 0.0125, 0.015, 0.02] x Seeds [42, 123, 456]
+Total configs: 6 alphas x 3 seeds x 2 horizons = 36
+================================================================================
+
+[1/5] Loading data...
+   Merged data: 9015 rows
+
+[2/5] Finding longest continuous segment...
+   Longest segment: 6115 hours
+   Date range: 2024-10-01 00:00:00+00:00 to 2025-06-12 18:00:00+00:00
+
+[3/5] Applying winsorization (1st/99th percentiles)...
+
+[4/5] Running grid search (36 configs)...
+
+   Config 1/36: H=1, alpha=0.005, seed=42
+      IC=0.012062, IR=0.34, PMR=0.60, n=5, Hard=False
+
+   Config 2/36: H=1, alpha=0.005, seed=123
+      IC=0.012062, IR=0.34, PMR=0.60, n=5, Hard=False
+
+   Config 3/36: H=1, alpha=0.005, seed=456
+      IC=0.012062, IR=0.34, PMR=0.60, n=5, Hard=False
+
+   Config 4/36: H=1, alpha=0.0075, seed=42
+      IC=-0.001166, IR=-0.05, PMR=0.60, n=5, Hard=False
+
+   Config 5/36: H=1, alpha=0.0075, seed=123
+      IC=-0.001166, IR=-0.05, PMR=0.60, n=5, Hard=False
+
+   Config 6/36: H=1, alpha=0.0075, seed=456
+      IC=-0.001166, IR=-0.05, PMR=0.60, n=5, Hard=False
+
+   Config 7/36: H=1, alpha=0.01, seed=42
+      IC=0.000014, IR=0.00, PMR=0.50, n=4, Hard=False
+
+   Config 8/36: H=1, alpha=0.01, seed=123
+      IC=0.000014, IR=0.00, PMR=0.50, n=4, Hard=False
+
+   Config 9/36: H=1, alpha=0.01, seed=456
+      IC=0.000014, IR=0.00, PMR=0.50, n=4, Hard=False
+
+   Config 10/36: H=1, alpha=0.0125, seed=42
+      IC=0.000014, IR=0.00, PMR=0.50, n=4, Hard=False
+
+   Config 11/36: H=1, alpha=0.0125, seed=123
+      IC=0.000014, IR=0.00, PMR=0.50, n=4, Hard=False
+
+   Config 12/36: H=1, alpha=0.0125, seed=456
+      IC=0.000014, IR=0.00, PMR=0.50, n=4, Hard=False
+
+   Config 13/36: H=1, alpha=0.015, seed=42
+      IC=0.000000, IR=0.58, PMR=0.75, n=4, Hard=False
+
+   Config 14/36: H=1, alpha=0.015, seed=123
+      IC=0.000000, IR=0.58, PMR=0.75, n=4, Hard=False
+
+   Config 15/36: H=1, alpha=0.015, seed=456
+      IC=0.000000, IR=0.58, PMR=0.75, n=4, Hard=False
+
+   Config 16/36: H=1, alpha=0.02, seed=42
+      IC=0.000000, IR=0.58, PMR=0.75, n=4, Hard=False
+
+   Config 17/36: H=1, alpha=0.02, seed=123
+      IC=0.000000, IR=0.58, PMR=0.75, n=4, Hard=False
+
+   Config 18/36: H=1, alpha=0.02, seed=456
+      IC=0.000000, IR=0.58, PMR=0.75, n=4, Hard=False
+
+   Config 19/36: H=3, alpha=0.005, seed=42
+      IC=0.006325, IR=0.30, PMR=0.80, n=5, Hard=False
+
+   Config 20/36: H=3, alpha=0.005, seed=123
+      IC=0.006325, IR=0.30, PMR=0.80, n=5, Hard=False
+
+   Config 21/36: H=3, alpha=0.005, seed=456
+      IC=0.006325, IR=0.30, PMR=0.80, n=5, Hard=False
+
+   Config 22/36: H=3, alpha=0.0075, seed=42
+      IC=0.003631, IR=0.71, PMR=1.00, n=3, Hard=False
+
+   Config 23/36: H=3, alpha=0.0075, seed=123
+      IC=0.003631, IR=0.71, PMR=1.00, n=3, Hard=False
+
+   Config 24/36: H=3, alpha=0.0075, seed=456
+      IC=0.003631, IR=0.71, PMR=1.00, n=3, Hard=False
+
+   Config 25/36: H=3, alpha=0.01, seed=42
+      IC=0.003631, IR=0.71, PMR=1.00, n=3, Hard=False
+
+   Config 26/36: H=3, alpha=0.01, seed=123
+      IC=0.003631, IR=0.71, PMR=1.00, n=3, Hard=False
+
+   Config 27/36: H=3, alpha=0.01, seed=456
+      IC=0.003631, IR=0.71, PMR=1.00, n=3, Hard=False
+
+   Config 28/36: H=3, alpha=0.0125, seed=42
+      IC=0.003631, IR=0.71, PMR=1.00, n=3, Hard=False
+
+   Config 29/36: H=3, alpha=0.0125, seed=123
+      IC=0.003631, IR=0.71, PMR=1.00, n=3, Hard=False
+
+   Config 30/36: H=3, alpha=0.0125, seed=456
+      IC=0.003631, IR=0.71, PMR=1.00, n=3, Hard=False
+
+   Config 31/36: H=3, alpha=0.015, seed=42
+      IC=0.000000, IR=2.03, PMR=1.00, n=3, Hard=False
+
+   Config 32/36: H=3, alpha=0.015, seed=123
+      IC=0.000000, IR=2.03, PMR=1.00, n=3, Hard=False
+
+   Config 33/36: H=3, alpha=0.015, seed=456
+      IC=0.000000, IR=2.03, PMR=1.00, n=3, Hard=False
+
+   Config 34/36: H=3, alpha=0.02, seed=42
+      IC=0.000000, IR=2.03, PMR=1.00, n=3, Hard=False
+
+   Config 35/36: H=3, alpha=0.02, seed=123
+      IC=0.000000, IR=2.03, PMR=1.00, n=3, Hard=False
+
+   Config 36/36: H=3, alpha=0.02, seed=456
+      IC=0.000000, IR=2.03, PMR=1.00, n=3, Hard=False
+
+[5/5] Saving results...
+   Saved to: warehouse\ic\lasso_alpha_fine_tune_20251119_105332.csv
+
+================================================================================
+SUMMARY ANALYSIS
+================================================================================
+
+--- H=1 ---
+Best IC: 0.012062 (alpha=0.005, seed=42, IR=0.34, PMR=0.60)
+Best IR: 0.58 (alpha=0.015, seed=123, IC=0.000000, PMR=0.75)
+Best PMR: 0.75 (alpha=0.015, seed=42, IC=0.000000, IR=0.58)
+Traceback (most recent call last):
+  File "C:\Users\niuji\Documents\Data\lasso_alpha_fine_tune.py", line 251, in <module>
+    print(f"\nNo Hard threshold candidates (IC\u22650.02 \u2227 IR\u22650.5 \u2227 PMR\u22650.55)")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\niuji\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 34: character maps to <undefined>

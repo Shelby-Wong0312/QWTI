@@ -1,0 +1,205 @@
+{
+  "strategy_id": "base_seed202_lean7_h1",
+  "strategy_name": "Seed202 LEAN 7-Feature (H=1)",
+  "version": "1.0.0",
+  "activation_date": "2025-11-19",
+  "allocation": {
+    "initial_weight": 0.15,
+    "max_weight": 0.3,
+    "ramp_schedule": [
+      {
+        "days": 30,
+        "weight": 0.2,
+        "condition": "IC > 0.02"
+      },
+      {
+        "days": 60,
+        "weight": 0.25,
+        "condition": "IC > 0.02"
+      },
+      {
+        "days": 90,
+        "weight": 0.3,
+        "condition": "IC > 0.02"
+      }
+    ]
+  },
+  "features": [
+    {
+      "name": "cl1_cl2",
+      "type": "market",
+      "importance": 0.46,
+      "source": "futures_curve"
+    },
+    {
+      "name": "ovx",
+      "type": "market",
+      "importance": 0.373,
+      "source": "volatility_index"
+    },
+    {
+      "name": "OIL_CORE_norm_art_cnt",
+      "type": "gdelt",
+      "importance": 0.161,
+      "source": "news_volume"
+    },
+    {
+      "name": "MACRO_norm_art_cnt",
+      "type": "gdelt",
+      "importance": 0.125,
+      "source": "news_volume"
+    },
+    {
+      "name": "SUPPLY_CHAIN_norm_art_cnt",
+      "type": "gdelt",
+      "importance": 0.091,
+      "source": "news_volume"
+    },
+    {
+      "name": "USD_RATE_norm_art_cnt",
+      "type": "gdelt",
+      "importance": 0.012,
+      "source": "news_volume"
+    },
+    {
+      "name": "GEOPOL_norm_art_cnt",
+      "type": "gdelt",
+      "importance": 0.009,
+      "source": "news_volume"
+    }
+  ],
+  "monitoring_metrics": {
+    "realtime": {
+      "update_frequency": "1h",
+      "metrics": [
+        {
+          "name": "current_position",
+          "alert_abs_threshold": 0.3
+        },
+        {
+          "name": "prediction",
+          "display_format": "%.4f"
+        },
+        {
+          "name": "feature_drift_pct",
+          "alert_threshold": 0.05
+        }
+      ]
+    },
+    "rolling_15d": {
+      "metrics": [
+        {
+          "name": "ic",
+          "alert_threshold": 0.01,
+          "target": 0.1358
+        },
+        {
+          "name": "ic_std",
+          "display_format": "%.4f"
+        }
+      ]
+    },
+    "rolling_60d": {
+      "metrics": [
+        {
+          "name": "ir",
+          "alert_threshold": 0.3,
+          "target": 1.5758
+        },
+        {
+          "name": "sharpe",
+          "display_format": "%.2f"
+        }
+      ]
+    },
+    "rolling_30d": {
+      "metrics": [
+        {
+          "name": "pmr",
+          "alert_threshold": 0.5,
+          "target": 0.8039
+        },
+        {
+          "name": "max_drawdown",
+          "alert_threshold": 0.02
+        }
+      ]
+    }
+  },
+  "risk_controls": {
+    "hard_stops": [
+      {
+        "condition": "ic < 0.01 for 5 consecutive windows",
+        "action": "AUTO_DEACTIVATE"
+      },
+      {
+        "condition": "ir < 0.3 for 10 consecutive windows",
+        "action": "AUTO_DEACTIVATE"
+      },
+      {
+        "condition": "data_quality_gate_fail",
+        "action": "HALT_TRADING"
+      },
+      {
+        "condition": "skip_ratio > 0.02",
+        "action": "HALT_TRADING"
+      }
+    ],
+    "soft_alerts": [
+      {
+        "condition": "ic < 0.02",
+        "action": "NOTIFY"
+      },
+      {
+        "condition": "drawdown > 0.015",
+        "action": "NOTIFY"
+      },
+      {
+        "condition": "feature_missing_pct > 0.05",
+        "action": "NOTIFY"
+      }
+    ],
+    "position_limits": {
+      "max_single_position": 0.3,
+      "max_leverage": 1.0,
+      "max_daily_turnover": 2.0
+    }
+  },
+  "data_integrity": {
+    "sources": [
+      {
+        "name": "GDELT",
+        "path": "data/gdelt_hourly.parquet",
+        "version": "v2024.10",
+        "hash_type": "SHA256",
+        "update_frequency": "1h",
+        "sla_latency": "15min"
+      },
+      {
+        "name": "WTI_Prices",
+        "path": "data/features_hourly.parquet",
+        "version": "v2025.10",
+        "hash_type": "SHA256",
+        "update_frequency": "1h",
+        "sla_latency": "5min"
+      },
+      {
+        "name": "Market_Term_OVX",
+        "path": "data/term_crack_ovx_hourly.csv",
+        "version": "live",
+        "hash_type": "SHA256",
+        "update_frequency": "1h",
+        "sla_latency": "10min"
+      }
+    ],
+    "no_drift_contract": "warehouse/policy/no_drift.yaml",
+    "preflight_check": "warehouse/policy/utils/nodrift_preflight.py"
+  },
+  "audit_trail": {
+    "position_log": "warehouse/positions/base_seed202_lean7_positions.csv",
+    "metrics_log": "warehouse/monitoring/base_seed202_lean7_metrics.csv",
+    "alert_log": "warehouse/monitoring/base_seed202_lean7_alerts.csv",
+    "replay_capability": true,
+    "snapshot_retention_days": 365
+  }
+}

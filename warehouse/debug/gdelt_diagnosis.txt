@@ -1,0 +1,168 @@
+GDELT Data Diagnosis Report
+================================================================================
+
+File: data\gdelt_hourly.parquet
+Shape: (8201, 29)
+
+Column Statistics:
+  ts_utc:
+    Type: datetime64[ns, UTC]
+    Null: 0 (0.0%)
+
+  ALL_art_cnt:
+    Type: int64
+    Null: 0 (0.0%)
+    Mean: 5153.1541
+    Std: 1994.0997
+
+  ALL_tone_avg:
+    Type: float64
+    Null: 0 (0.0%)
+    Mean: -0.5170
+    Std: 0.3197
+
+  ALL_tone_pos_ratio:
+    Type: float64
+    Null: 0 (0.0%)
+    Mean: 0.4411
+    Std: 0.0353
+
+  ALL_topic_cnt:
+    Type: int64
+    Null: 0 (0.0%)
+    Mean: 127119.2478
+    Std: 48568.4087
+
+  OIL_CORE_art_cnt:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  OIL_CORE_tone_avg:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  OIL_CORE_tone_pos_ratio:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  OIL_CORE_topic_cnt:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  GEOPOL_art_cnt:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  GEOPOL_tone_avg:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  GEOPOL_tone_pos_ratio:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  GEOPOL_topic_cnt:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  USD_RATE_art_cnt:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  USD_RATE_tone_avg:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  USD_RATE_tone_pos_ratio:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  USD_RATE_topic_cnt:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  SUPPLY_CHAIN_art_cnt:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  SUPPLY_CHAIN_tone_avg:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  SUPPLY_CHAIN_tone_pos_ratio:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  SUPPLY_CHAIN_topic_cnt:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  MACRO_art_cnt:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  MACRO_tone_avg:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  MACRO_tone_pos_ratio:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  MACRO_topic_cnt:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  ESG_POLICY_art_cnt:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  ESG_POLICY_tone_avg:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  ESG_POLICY_tone_pos_ratio:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+  ESG_POLICY_topic_cnt:
+    Type: object
+    Null: 8201 (100.0%)
+    None: 0
+
+
+================================================================================
+DIAGNOSIS:
+All bucket feature columns (USD_RATE, GEOPOL, SUPPLY_CHAIN, MACRO, ESG_POLICY)
+contain 100% NULL/None values.
+
+This indicates that gdelt_hourly.parquet was not properly generated,
+or the bucket mapping logic in gdelt_gkg_fetch_aggregate.py is not working.
+
+RECOMMENDATION:
+1. Check gdelt_gkg_fetch_aggregate.py for bucket mapping logic
+2. Verify RAW GKG files are being parsed correctly
+3. Re-run the aggregation pipeline to populate bucket data

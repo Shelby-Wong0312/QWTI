@@ -1,0 +1,59 @@
+Initializing Base Strategy Dashboard...
+
+======================================================================
+               BASE STRATEGY MONITORING DASHBOARD
+======================================================================
+Strategy: base_seed202_lean7_h1
+Version: 1.0.0
+Activated: 2025-11-19
+======================================================================
+
+[STRATEGY CARD]
+
++-------------------------------------------------------------------+
+| Strategy: Seed202 LEAN 7-Feature (H=1)                            |
++-------------------------------------------------------------------+
+| Recommendation: ACTIVE      Confidence: 100%               |
+| Current Weight: 15.0%    Max Weight: 30.0%          |
++-------------------------------------------------------------------+
+| Performance (15d rolling):                                        |
+|   IC mean:    0.1229  (target: 0.1358)                      |
+|   IR:         6.3380  (target: 1.5758)                      |
+|   PMR:        1.0000  (target: 0.8039)                      |
++-------------------------------------------------------------------+
+| Status: HEALTHY                                           |
+| Last Update: 2025-11-19T15:04:56.876797                 |
++-------------------------------------------------------------------+
+        
+
+[HEALTH CHECK]
+Overall Status: HEALTHY
+
+Rolling Metrics:
+  15d: IC=0.1229, IR=6.3380, PMR=100.00%
+  60d: IC=0.1229, IR=6.3380
+
+[ACTIVE ALERTS] None - All systems nominal
+
+[RISK CONTROLS]
+Hard Stops:
+  - ic < 0.01 for 5 consecutive windows -> AUTO_DEACTIVATE
+  - ir < 0.3 for 10 consecutive windows -> AUTO_DEACTIVATE
+  - data_quality_gate_fail -> HALT_TRADING
+  - skip_ratio > 0.02 -> HALT_TRADING
+
+[DATA INTEGRITY]
+  [GDELT] data/gdelt_hourly.parquet
+    Version: v2024.10, Update: 1h
+  [WTI_Prices] data/features_hourly.parquet
+    Version: v2025.10, Update: 1h
+  [Market_Term_OVX] data/term_crack_ovx_hourly.csv
+    Version: live, Update: 1h
+
+======================================================================
+
+
+Generating monitoring summary...
+
+Summary Status: HEALTHY
+Alerts: 0

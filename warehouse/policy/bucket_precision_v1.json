@@ -1,0 +1,88 @@
+{
+  "version": "1.0",
+  "created": "2025-11-18",
+  "rationale": "Precision策略v1 - 针对USD_RATE/GEOPOL bucket过宽噪音问题",
+
+  "USD_RATE": {
+    "strategy": "Focus on USD strength signals relevant to oil pricing",
+    "keywords": {
+      "keep": [
+        "EPU_CATS_MONETARY_POLICY",
+        "INTEREST_RATE",
+        "FED",
+        "DOLLAR_INDEX"
+      ],
+      "remove": [
+        "ECON_WORLDCURRENCIES_DOLLARS",
+        "ECB",
+        "FX_"
+      ],
+      "add": [
+        "DXY",
+        "USD_STRENGTH",
+        "DOLLAR_RALLY"
+      ]
+    },
+    "tone_filter": {
+      "enabled": true,
+      "condition": "tone_avg < -1.0",
+      "rationale": "Negative tone (hawkish Fed, dollar strength) pressures oil prices"
+    },
+    "expected_reduction": "30-40% articles (from 163 to ~100/hour)"
+  },
+
+  "GEOPOL": {
+    "strategy": "Focus on oil-relevant geopolitical conflicts (Middle East, Russia, major producers)",
+    "keywords": {
+      "keep": [
+        "SANCTIONS",
+        "ARMEDCONFLICT",
+        "TERROR",
+        "CEASEFIRE",
+        "MISSILE",
+        "STRIKE"
+      ],
+      "remove": [
+        "DIPLOMACY",
+        "USPEC_",
+        "UNREST"
+      ],
+      "add": [
+        "IRAN_",
+        "IRAQ_",
+        "SAUDI",
+        "RUSSIA_UKRAINE",
+        "OPEC_MEETING",
+        "MIDDLE_EAST_",
+        "STRAIT_HORMUZ"
+      ]
+    },
+    "tone_filter": {
+      "enabled": true,
+      "condition": "tone_avg < -2.0",
+      "rationale": "Severe negative tone (escalating conflict) creates supply risk premium"
+    },
+    "co_occurrence_filter": {
+      "enabled": true,
+      "require_co_theme": "OIL_",
+      "rationale": "Geopolitical news must mention oil to be relevant"
+    },
+    "expected_reduction": "80-85% articles (from 1,851 to ~250/hour)"
+  },
+
+  "implementation": {
+    "step1": "Update theme_map.json with new keywords",
+    "step2": "Modify aggregator to apply tone_filter",
+    "step3": "Modify aggregator to apply co_occurrence_filter for GEOPOL",
+    "step4": "Re-aggregate all monthly data (2024-10 to 2025-10)",
+    "step5": "Rebuild gdelt_hourly.parquet",
+    "step6": "Re-run IC evaluation (H=1/2/3, lag=1h)"
+  },
+
+  "success_metrics": {
+    "USD_RATE_target": "100 articles/hour (vs 163 current)",
+    "GEOPOL_target": "250 articles/hour (vs 1,851 current)",
+    "IC_improvement": "Expect IC to move from negative toward positive",
+    "PMR_improvement": "Expect PMR > 0 (currently 0.0)"
+  }
+}

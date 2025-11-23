@@ -1,0 +1,72 @@
+Total Features: 65
+
+Base Features (5):
+  OIL_CORE_norm_art_cnt
+  GEOPOL_norm_art_cnt
+  USD_RATE_norm_art_cnt
+  SUPPLY_CHAIN_norm_art_cnt
+  MACRO_norm_art_cnt
+
+Lagged Features (30):
+  OIL_CORE_norm_art_cnt_lag1h
+  GEOPOL_norm_art_cnt_lag1h
+  USD_RATE_norm_art_cnt_lag1h
+  SUPPLY_CHAIN_norm_art_cnt_lag1h
+  MACRO_norm_art_cnt_lag1h
+  OIL_CORE_norm_art_cnt_lag2h
+  GEOPOL_norm_art_cnt_lag2h
+  USD_RATE_norm_art_cnt_lag2h
+  SUPPLY_CHAIN_norm_art_cnt_lag2h
+  MACRO_norm_art_cnt_lag2h
+  OIL_CORE_norm_art_cnt_lag3h
+  GEOPOL_norm_art_cnt_lag3h
+  USD_RATE_norm_art_cnt_lag3h
+  SUPPLY_CHAIN_norm_art_cnt_lag3h
+  MACRO_norm_art_cnt_lag3h
+  OIL_CORE_norm_art_cnt_lag4h
+  GEOPOL_norm_art_cnt_lag4h
+  USD_RATE_norm_art_cnt_lag4h
+  SUPPLY_CHAIN_norm_art_cnt_lag4h
+  MACRO_norm_art_cnt_lag4h
+  OIL_CORE_norm_art_cnt_lag5h
+  GEOPOL_norm_art_cnt_lag5h
+  USD_RATE_norm_art_cnt_lag5h
+  SUPPLY_CHAIN_norm_art_cnt_lag5h
+  MACRO_norm_art_cnt_lag5h
+  OIL_CORE_norm_art_cnt_lag6h
+  GEOPOL_norm_art_cnt_lag6h
+  USD_RATE_norm_art_cnt_lag6h
+  SUPPLY_CHAIN_norm_art_cnt_lag6h
+  MACRO_norm_art_cnt_lag6h
+
+Rolling Features (30):
+  OIL_CORE_norm_art_cnt_roll3h_mean
+  OIL_CORE_norm_art_cnt_roll3h_std
+  GEOPOL_norm_art_cnt_roll3h_mean
+  GEOPOL_norm_art_cnt_roll3h_std
+  USD_RATE_norm_art_cnt_roll3h_mean
+  USD_RATE_norm_art_cnt_roll3h_std
+  SUPPLY_CHAIN_norm_art_cnt_roll3h_mean
+  SUPPLY_CHAIN_norm_art_cnt_roll3h_std
+  MACRO_norm_art_cnt_roll3h_mean
+  MACRO_norm_art_cnt_roll3h_std
+  OIL_CORE_norm_art_cnt_roll6h_mean
+  OIL_CORE_norm_art_cnt_roll6h_std
+  GEOPOL_norm_art_cnt_roll6h_mean
+  GEOPOL_norm_art_cnt_roll6h_std
+  USD_RATE_norm_art_cnt_roll6h_mean
+  USD_RATE_norm_art_cnt_roll6h_std
+  SUPPLY_CHAIN_norm_art_cnt_roll6h_mean
+  SUPPLY_CHAIN_norm_art_cnt_roll6h_std
+  MACRO_norm_art_cnt_roll6h_mean
+  MACRO_norm_art_cnt_roll6h_std
+  OIL_CORE_norm_art_cnt_roll12h_mean
+  OIL_CORE_norm_art_cnt_roll12h_std
+  GEOPOL_norm_art_cnt_roll12h_mean
+  GEOPOL_norm_art_cnt_roll12h_std
+  USD_RATE_norm_art_cnt_roll12h_mean
+  USD_RATE_norm_art_cnt_roll12h_std
+  SUPPLY_CHAIN_norm_art_cnt_roll12h_mean
+  SUPPLY_CHAIN_norm_art_cnt_roll12h_std
+  MACRO_norm_art_cnt_roll12h_mean
+  MACRO_norm_art_cnt_roll12h_std

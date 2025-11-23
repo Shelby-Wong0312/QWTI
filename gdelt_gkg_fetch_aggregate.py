@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Bulk download and aggregate GDELT 2.1 GKG 15-minute feeds into hourly features.
 """
@@ -29,7 +29,7 @@ from requests import RequestException
 from tqdm import tqdm
 
 
-BASE_URL = "http://data.gdeltproject.org/gkg"
+BASE_URL = "http://data.gdeltproject.org/gdeltv2"
 TONE_PATTERN = re.compile(r"^-?\d+(?:\.\d+)?,\d+,\d+,-?\d+(?:\.\d+)?,\d+,\d+$")
 URL_PATTERN = re.compile(r"^https?://", re.IGNORECASE)
 
@@ -312,5 +312,7 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
 
 

@@ -1,0 +1,381 @@
+================================================================================
+MODEL HYPERPARAMETER GRID SEARCH
+================================================================================
+Start time: 2025-11-19 10:40:57
+
+### Loading Data ###
+GDELT rows: 9024
+Price rows: 74473
+Merged rows: 9015
+
+Rows with all bucket features: 9015 (100.0%)
+
+Longest continuous segment: 6115 hours (254.8 days)
+  From 2024-10-01 00:00:00+00:00 to 2025-06-12 18:00:00+00:00
+
+### Starting Grid Search ###
+
+Total configurations to test: 294
+
+## H=1 hours ##
+
+Valid rows after lag/forward: 6114
+Adjusted window: train=1440h, test=720h
+Testing 49 model configs × 2 standardization options
+
+[1/294] Testing Ridge(α=0.01, std=True)... IC=-0.0137, IR=-0.51, PMR=0.33 
+[2/294] Testing Ridge(α=0.01, std=False)... IC=-0.0137, IR=-0.51, PMR=0.33 
+[3/294] Testing Ridge(α=0.1, std=True)... IC=-0.0137, IR=-0.51, PMR=0.33 
+[4/294] Testing Ridge(α=0.1, std=False)... IC=-0.0137, IR=-0.51, PMR=0.33 
+[5/294] Testing Ridge(α=0.5, std=True)... IC=-0.0137, IR=-0.51, PMR=0.33 
+[6/294] Testing Ridge(α=0.5, std=False)... IC=-0.0137, IR=-0.51, PMR=0.33 
+[7/294] Testing Ridge(α=1.0, std=True)... IC=-0.0136, IR=-0.51, PMR=0.33 
+[8/294] Testing Ridge(α=1.0, std=False)... IC=-0.0137, IR=-0.51, PMR=0.33 
+[9/294] Testing Ridge(α=2.0, std=True)... IC=-0.0136, IR=-0.51, PMR=0.33 
+[10/294] Testing Ridge(α=2.0, std=False)... IC=-0.0137, IR=-0.51, PMR=0.33 
+[11/294] Testing Ridge(α=5.0, std=True)... IC=-0.0135, IR=-0.51, PMR=0.33 
+[12/294] Testing Ridge(α=5.0, std=False)... IC=-0.0137, IR=-0.51, PMR=0.33 
+[13/294] Testing Ridge(α=10.0, std=True)... IC=-0.0133, IR=-0.50, PMR=0.33 
+[14/294] Testing Ridge(α=10.0, std=False)... IC=-0.0137, IR=-0.51, PMR=0.33 
+[15/294] Testing Lasso(α=0.01, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[16/294] Testing Lasso(α=0.01, std=False)... IC=0.0190, IR=3.73, PMR=1.00 
+[17/294] Testing Lasso(α=0.1, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[18/294] Testing Lasso(α=0.1, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[19/294] Testing Lasso(α=0.5, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[20/294] Testing Lasso(α=0.5, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[21/294] Testing Lasso(α=1.0, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[22/294] Testing Lasso(α=1.0, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[23/294] Testing Lasso(α=2.0, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[24/294] Testing Lasso(α=2.0, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[25/294] Testing Lasso(α=5.0, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[26/294] Testing Lasso(α=5.0, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[27/294] Testing Lasso(α=10.0, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[28/294] Testing Lasso(α=10.0, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[29/294] Testing ElasticNet(α=0.01, l1=0.1, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[30/294] Testing ElasticNet(α=0.01, l1=0.1, std=False)... IC=0.0032, IR=0.14, PMR=0.67 
+[31/294] Testing ElasticNet(α=0.01, l1=0.3, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[32/294] Testing ElasticNet(α=0.01, l1=0.3, std=False)... IC=0.0052, IR=0.23, PMR=0.67 
+[33/294] Testing ElasticNet(α=0.01, l1=0.5, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[34/294] Testing ElasticNet(α=0.01, l1=0.5, std=False)... IC=0.0065, IR=0.28, PMR=0.67 
+[35/294] Testing ElasticNet(α=0.01, l1=0.7, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[36/294] Testing ElasticNet(α=0.01, l1=0.7, std=False)... IC=0.0060, IR=0.26, PMR=0.75 
+[37/294] Testing ElasticNet(α=0.01, l1=0.9, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[38/294] Testing ElasticNet(α=0.01, l1=0.9, std=False)... IC=0.0190, IR=3.73, PMR=1.00 
+[39/294] Testing ElasticNet(α=0.1, l1=0.1, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[40/294] Testing ElasticNet(α=0.1, l1=0.1, std=False)... IC=0.0190, IR=3.73, PMR=1.00 
+[41/294] Testing ElasticNet(α=0.1, l1=0.3, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[42/294] Testing ElasticNet(α=0.1, l1=0.3, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[43/294] Testing ElasticNet(α=0.1, l1=0.5, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[44/294] Testing ElasticNet(α=0.1, l1=0.5, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[45/294] Testing ElasticNet(α=0.1, l1=0.7, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[46/294] Testing ElasticNet(α=0.1, l1=0.7, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[47/294] Testing ElasticNet(α=0.1, l1=0.9, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[48/294] Testing ElasticNet(α=0.1, l1=0.9, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[49/294] Testing ElasticNet(α=0.5, l1=0.1, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[50/294] Testing ElasticNet(α=0.5, l1=0.1, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[51/294] Testing ElasticNet(α=0.5, l1=0.3, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[52/294] Testing ElasticNet(α=0.5, l1=0.3, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[53/294] Testing ElasticNet(α=0.5, l1=0.5, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[54/294] Testing ElasticNet(α=0.5, l1=0.5, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[55/294] Testing ElasticNet(α=0.5, l1=0.7, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[56/294] Testing ElasticNet(α=0.5, l1=0.7, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[57/294] Testing ElasticNet(α=0.5, l1=0.9, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[58/294] Testing ElasticNet(α=0.5, l1=0.9, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[59/294] Testing ElasticNet(α=1.0, l1=0.1, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[60/294] Testing ElasticNet(α=1.0, l1=0.1, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[61/294] Testing ElasticNet(α=1.0, l1=0.3, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[62/294] Testing ElasticNet(α=1.0, l1=0.3, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[63/294] Testing ElasticNet(α=1.0, l1=0.5, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[64/294] Testing ElasticNet(α=1.0, l1=0.5, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[65/294] Testing ElasticNet(α=1.0, l1=0.7, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[66/294] Testing ElasticNet(α=1.0, l1=0.7, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[67/294] Testing ElasticNet(α=1.0, l1=0.9, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[68/294] Testing ElasticNet(α=1.0, l1=0.9, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[69/294] Testing ElasticNet(α=2.0, l1=0.1, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[70/294] Testing ElasticNet(α=2.0, l1=0.1, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[71/294] Testing ElasticNet(α=2.0, l1=0.3, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[72/294] Testing ElasticNet(α=2.0, l1=0.3, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[73/294] Testing ElasticNet(α=2.0, l1=0.5, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[74/294] Testing ElasticNet(α=2.0, l1=0.5, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[75/294] Testing ElasticNet(α=2.0, l1=0.7, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[76/294] Testing ElasticNet(α=2.0, l1=0.7, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[77/294] Testing ElasticNet(α=2.0, l1=0.9, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[78/294] Testing ElasticNet(α=2.0, l1=0.9, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[79/294] Testing ElasticNet(α=5.0, l1=0.1, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[80/294] Testing ElasticNet(α=5.0, l1=0.1, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[81/294] Testing ElasticNet(α=5.0, l1=0.3, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[82/294] Testing ElasticNet(α=5.0, l1=0.3, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[83/294] Testing ElasticNet(α=5.0, l1=0.5, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[84/294] Testing ElasticNet(α=5.0, l1=0.5, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[85/294] Testing ElasticNet(α=5.0, l1=0.7, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[86/294] Testing ElasticNet(α=5.0, l1=0.7, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[87/294] Testing ElasticNet(α=5.0, l1=0.9, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[88/294] Testing ElasticNet(α=5.0, l1=0.9, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[89/294] Testing ElasticNet(α=10.0, l1=0.1, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[90/294] Testing ElasticNet(α=10.0, l1=0.1, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[91/294] Testing ElasticNet(α=10.0, l1=0.3, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[92/294] Testing ElasticNet(α=10.0, l1=0.3, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[93/294] Testing ElasticNet(α=10.0, l1=0.5, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[94/294] Testing ElasticNet(α=10.0, l1=0.5, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[95/294] Testing ElasticNet(α=10.0, l1=0.7, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[96/294] Testing ElasticNet(α=10.0, l1=0.7, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+[97/294] Testing ElasticNet(α=10.0, l1=0.9, std=True)... IC=0.0000, IR=1.61, PMR=1.00 
+[98/294] Testing ElasticNet(α=10.0, l1=0.9, std=False)... IC=0.0000, IR=1.61, PMR=1.00 
+
+## H=2 hours ##
+
+Valid rows after lag/forward: 6114
+Adjusted window: train=1440h, test=720h
+Testing 49 model configs × 2 standardization options
+
+[99/294] Testing Ridge(α=0.01, std=True)... IC=-0.0061, IR=-0.15, PMR=0.50 
+[100/294] Testing Ridge(α=0.01, std=False)... IC=-0.0061, IR=-0.15, PMR=0.50 
+[101/294] Testing Ridge(α=0.1, std=True)... IC=-0.0061, IR=-0.15, PMR=0.50 
+[102/294] Testing Ridge(α=0.1, std=False)... IC=-0.0061, IR=-0.15, PMR=0.50 
+[103/294] Testing Ridge(α=0.5, std=True)... IC=-0.0061, IR=-0.15, PMR=0.50 
+[104/294] Testing Ridge(α=0.5, std=False)... IC=-0.0061, IR=-0.15, PMR=0.50 
+[105/294] Testing Ridge(α=1.0, std=True)... IC=-0.0061, IR=-0.15, PMR=0.50 
+[106/294] Testing Ridge(α=1.0, std=False)... IC=-0.0061, IR=-0.15, PMR=0.50 
+[107/294] Testing Ridge(α=2.0, std=True)... IC=-0.0061, IR=-0.15, PMR=0.50 
+[108/294] Testing Ridge(α=2.0, std=False)... IC=-0.0061, IR=-0.15, PMR=0.50 
+[109/294] Testing Ridge(α=5.0, std=True)... IC=-0.0061, IR=-0.15, PMR=0.50 
+[110/294] Testing Ridge(α=5.0, std=False)... IC=-0.0061, IR=-0.15, PMR=0.50 
+[111/294] Testing Ridge(α=10.0, std=True)... IC=-0.0060, IR=-0.15, PMR=0.50 
+[112/294] Testing Ridge(α=10.0, std=False)... IC=-0.0061, IR=-0.15, PMR=0.50 
+[113/294] Testing Lasso(α=0.01, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[114/294] Testing Lasso(α=0.01, std=False)... IC=0.0050, IR=0.12, PMR=0.67 
+[115/294] Testing Lasso(α=0.1, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[116/294] Testing Lasso(α=0.1, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[117/294] Testing Lasso(α=0.5, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[118/294] Testing Lasso(α=0.5, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[119/294] Testing Lasso(α=1.0, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[120/294] Testing Lasso(α=1.0, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[121/294] Testing Lasso(α=2.0, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[122/294] Testing Lasso(α=2.0, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[123/294] Testing Lasso(α=5.0, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[124/294] Testing Lasso(α=5.0, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[125/294] Testing Lasso(α=10.0, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[126/294] Testing Lasso(α=10.0, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[127/294] Testing ElasticNet(α=0.01, l1=0.1, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[128/294] Testing ElasticNet(α=0.01, l1=0.1, std=False)... IC=0.0036, IR=0.09, PMR=0.67 
+[129/294] Testing ElasticNet(α=0.01, l1=0.3, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[130/294] Testing ElasticNet(α=0.01, l1=0.3, std=False)... IC=0.0043, IR=0.11, PMR=0.67 
+[131/294] Testing ElasticNet(α=0.01, l1=0.5, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[132/294] Testing ElasticNet(α=0.01, l1=0.5, std=False)... IC=0.0048, IR=0.12, PMR=0.67 
+[133/294] Testing ElasticNet(α=0.01, l1=0.7, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[134/294] Testing ElasticNet(α=0.01, l1=0.7, std=False)... IC=0.0050, IR=0.12, PMR=0.67 
+[135/294] Testing ElasticNet(α=0.01, l1=0.9, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[136/294] Testing ElasticNet(α=0.01, l1=0.9, std=False)... IC=0.0050, IR=0.12, PMR=0.67 
+[137/294] Testing ElasticNet(α=0.1, l1=0.1, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[138/294] Testing ElasticNet(α=0.1, l1=0.1, std=False)... IC=0.0050, IR=0.12, PMR=0.67 
+[139/294] Testing ElasticNet(α=0.1, l1=0.3, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[140/294] Testing ElasticNet(α=0.1, l1=0.3, std=False)... IC=0.0060, IR=0.58, PMR=0.25 
+[141/294] Testing ElasticNet(α=0.1, l1=0.5, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[142/294] Testing ElasticNet(α=0.1, l1=0.5, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[143/294] Testing ElasticNet(α=0.1, l1=0.7, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[144/294] Testing ElasticNet(α=0.1, l1=0.7, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[145/294] Testing ElasticNet(α=0.1, l1=0.9, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[146/294] Testing ElasticNet(α=0.1, l1=0.9, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[147/294] Testing ElasticNet(α=0.5, l1=0.1, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[148/294] Testing ElasticNet(α=0.5, l1=0.1, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[149/294] Testing ElasticNet(α=0.5, l1=0.3, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[150/294] Testing ElasticNet(α=0.5, l1=0.3, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[151/294] Testing ElasticNet(α=0.5, l1=0.5, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[152/294] Testing ElasticNet(α=0.5, l1=0.5, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[153/294] Testing ElasticNet(α=0.5, l1=0.7, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[154/294] Testing ElasticNet(α=0.5, l1=0.7, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[155/294] Testing ElasticNet(α=0.5, l1=0.9, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[156/294] Testing ElasticNet(α=0.5, l1=0.9, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[157/294] Testing ElasticNet(α=1.0, l1=0.1, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[158/294] Testing ElasticNet(α=1.0, l1=0.1, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[159/294] Testing ElasticNet(α=1.0, l1=0.3, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[160/294] Testing ElasticNet(α=1.0, l1=0.3, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[161/294] Testing ElasticNet(α=1.0, l1=0.5, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[162/294] Testing ElasticNet(α=1.0, l1=0.5, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[163/294] Testing ElasticNet(α=1.0, l1=0.7, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[164/294] Testing ElasticNet(α=1.0, l1=0.7, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[165/294] Testing ElasticNet(α=1.0, l1=0.9, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[166/294] Testing ElasticNet(α=1.0, l1=0.9, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[167/294] Testing ElasticNet(α=2.0, l1=0.1, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[168/294] Testing ElasticNet(α=2.0, l1=0.1, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[169/294] Testing ElasticNet(α=2.0, l1=0.3, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[170/294] Testing ElasticNet(α=2.0, l1=0.3, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[171/294] Testing ElasticNet(α=2.0, l1=0.5, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[172/294] Testing ElasticNet(α=2.0, l1=0.5, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[173/294] Testing ElasticNet(α=2.0, l1=0.7, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[174/294] Testing ElasticNet(α=2.0, l1=0.7, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[175/294] Testing ElasticNet(α=2.0, l1=0.9, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[176/294] Testing ElasticNet(α=2.0, l1=0.9, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[177/294] Testing ElasticNet(α=5.0, l1=0.1, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[178/294] Testing ElasticNet(α=5.0, l1=0.1, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[179/294] Testing ElasticNet(α=5.0, l1=0.3, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[180/294] Testing ElasticNet(α=5.0, l1=0.3, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[181/294] Testing ElasticNet(α=5.0, l1=0.5, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[182/294] Testing ElasticNet(α=5.0, l1=0.5, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[183/294] Testing ElasticNet(α=5.0, l1=0.7, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[184/294] Testing ElasticNet(α=5.0, l1=0.7, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[185/294] Testing ElasticNet(α=5.0, l1=0.9, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[186/294] Testing ElasticNet(α=5.0, l1=0.9, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[187/294] Testing ElasticNet(α=10.0, l1=0.1, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[188/294] Testing ElasticNet(α=10.0, l1=0.1, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[189/294] Testing ElasticNet(α=10.0, l1=0.3, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[190/294] Testing ElasticNet(α=10.0, l1=0.3, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[191/294] Testing ElasticNet(α=10.0, l1=0.5, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[192/294] Testing ElasticNet(α=10.0, l1=0.5, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[193/294] Testing ElasticNet(α=10.0, l1=0.7, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[194/294] Testing ElasticNet(α=10.0, l1=0.7, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[195/294] Testing ElasticNet(α=10.0, l1=0.9, std=True)... IC=-0.0000, IR=-0.99, PMR=0.25 
+[196/294] Testing ElasticNet(α=10.0, l1=0.9, std=False)... IC=-0.0000, IR=-0.99, PMR=0.25 
+
+## H=3 hours ##
+
+Valid rows after lag/forward: 6114
+Adjusted window: train=1440h, test=720h
+Testing 49 model configs × 2 standardization options
+
+[197/294] Testing Ridge(α=0.01, std=True)... IC=-0.0005, IR=-0.02, PMR=0.67 
+[198/294] Testing Ridge(α=0.01, std=False)... IC=-0.0005, IR=-0.02, PMR=0.67 
+[199/294] Testing Ridge(α=0.1, std=True)... IC=-0.0005, IR=-0.02, PMR=0.67 
+[200/294] Testing Ridge(α=0.1, std=False)... IC=-0.0005, IR=-0.02, PMR=0.67 
+[201/294] Testing Ridge(α=0.5, std=True)... IC=-0.0005, IR=-0.02, PMR=0.67 
+[202/294] Testing Ridge(α=0.5, std=False)... IC=-0.0005, IR=-0.02, PMR=0.67 
+[203/294] Testing Ridge(α=1.0, std=True)... IC=-0.0005, IR=-0.02, PMR=0.67 
+[204/294] Testing Ridge(α=1.0, std=False)... IC=-0.0005, IR=-0.02, PMR=0.67 
+[205/294] Testing Ridge(α=2.0, std=True)... IC=-0.0004, IR=-0.02, PMR=0.67 
+[206/294] Testing Ridge(α=2.0, std=False)... IC=-0.0005, IR=-0.02, PMR=0.67 
+[207/294] Testing Ridge(α=5.0, std=True)... IC=-0.0003, IR=-0.01, PMR=0.67 
+[208/294] Testing Ridge(α=5.0, std=False)... IC=-0.0005, IR=-0.02, PMR=0.67 
+[209/294] Testing Ridge(α=10.0, std=True)... IC=-0.0001, IR=-0.00, PMR=0.67 
+[210/294] Testing Ridge(α=10.0, std=False)... IC=-0.0005, IR=-0.02, PMR=0.67 
+[211/294] Testing Lasso(α=0.01, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[212/294] Testing Lasso(α=0.01, std=False)... IC=0.0046, IR=0.11, PMR=0.67 
+[213/294] Testing Lasso(α=0.1, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[214/294] Testing Lasso(α=0.1, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[215/294] Testing Lasso(α=0.5, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[216/294] Testing Lasso(α=0.5, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[217/294] Testing Lasso(α=1.0, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[218/294] Testing Lasso(α=1.0, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[219/294] Testing Lasso(α=2.0, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[220/294] Testing Lasso(α=2.0, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[221/294] Testing Lasso(α=5.0, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[222/294] Testing Lasso(α=5.0, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[223/294] Testing Lasso(α=10.0, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[224/294] Testing Lasso(α=10.0, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[225/294] Testing ElasticNet(α=0.01, l1=0.1, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[226/294] Testing ElasticNet(α=0.01, l1=0.1, std=False)... IC=0.0029, IR=0.06, PMR=0.67 
+[227/294] Testing ElasticNet(α=0.01, l1=0.3, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[228/294] Testing ElasticNet(α=0.01, l1=0.3, std=False)... IC=0.0046, IR=0.11, PMR=0.67 
+[229/294] Testing ElasticNet(α=0.01, l1=0.5, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[230/294] Testing ElasticNet(α=0.01, l1=0.5, std=False)... IC=0.0046, IR=0.11, PMR=0.67 
+[231/294] Testing ElasticNet(α=0.01, l1=0.7, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[232/294] Testing ElasticNet(α=0.01, l1=0.7, std=False)... IC=0.0046, IR=0.11, PMR=0.67 
+[233/294] Testing ElasticNet(α=0.01, l1=0.9, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[234/294] Testing ElasticNet(α=0.01, l1=0.9, std=False)... IC=0.0046, IR=0.11, PMR=0.67 
+[235/294] Testing ElasticNet(α=0.1, l1=0.1, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[236/294] Testing ElasticNet(α=0.1, l1=0.1, std=False)... IC=0.0046, IR=0.11, PMR=0.67 
+[237/294] Testing ElasticNet(α=0.1, l1=0.3, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[238/294] Testing ElasticNet(α=0.1, l1=0.3, std=False)... IC=0.0043, IR=0.58, PMR=0.75 
+[239/294] Testing ElasticNet(α=0.1, l1=0.5, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[240/294] Testing ElasticNet(α=0.1, l1=0.5, std=False)... IC=0.0043, IR=0.58, PMR=0.75 
+[241/294] Testing ElasticNet(α=0.1, l1=0.7, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[242/294] Testing ElasticNet(α=0.1, l1=0.7, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[243/294] Testing ElasticNet(α=0.1, l1=0.9, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[244/294] Testing ElasticNet(α=0.1, l1=0.9, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[245/294] Testing ElasticNet(α=0.5, l1=0.1, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[246/294] Testing ElasticNet(α=0.5, l1=0.1, std=False)... IC=0.0043, IR=0.58, PMR=0.75 
+[247/294] Testing ElasticNet(α=0.5, l1=0.3, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[248/294] Testing ElasticNet(α=0.5, l1=0.3, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[249/294] Testing ElasticNet(α=0.5, l1=0.5, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[250/294] Testing ElasticNet(α=0.5, l1=0.5, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[251/294] Testing ElasticNet(α=0.5, l1=0.7, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[252/294] Testing ElasticNet(α=0.5, l1=0.7, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[253/294] Testing ElasticNet(α=0.5, l1=0.9, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[254/294] Testing ElasticNet(α=0.5, l1=0.9, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[255/294] Testing ElasticNet(α=1.0, l1=0.1, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[256/294] Testing ElasticNet(α=1.0, l1=0.1, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[257/294] Testing ElasticNet(α=1.0, l1=0.3, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[258/294] Testing ElasticNet(α=1.0, l1=0.3, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[259/294] Testing ElasticNet(α=1.0, l1=0.5, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[260/294] Testing ElasticNet(α=1.0, l1=0.5, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[261/294] Testing ElasticNet(α=1.0, l1=0.7, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[262/294] Testing ElasticNet(α=1.0, l1=0.7, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[263/294] Testing ElasticNet(α=1.0, l1=0.9, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[264/294] Testing ElasticNet(α=1.0, l1=0.9, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[265/294] Testing ElasticNet(α=2.0, l1=0.1, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[266/294] Testing ElasticNet(α=2.0, l1=0.1, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[267/294] Testing ElasticNet(α=2.0, l1=0.3, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[268/294] Testing ElasticNet(α=2.0, l1=0.3, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[269/294] Testing ElasticNet(α=2.0, l1=0.5, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[270/294] Testing ElasticNet(α=2.0, l1=0.5, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[271/294] Testing ElasticNet(α=2.0, l1=0.7, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[272/294] Testing ElasticNet(α=2.0, l1=0.7, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[273/294] Testing ElasticNet(α=2.0, l1=0.9, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[274/294] Testing ElasticNet(α=2.0, l1=0.9, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[275/294] Testing ElasticNet(α=5.0, l1=0.1, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[276/294] Testing ElasticNet(α=5.0, l1=0.1, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[277/294] Testing ElasticNet(α=5.0, l1=0.3, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[278/294] Testing ElasticNet(α=5.0, l1=0.3, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[279/294] Testing ElasticNet(α=5.0, l1=0.5, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[280/294] Testing ElasticNet(α=5.0, l1=0.5, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[281/294] Testing ElasticNet(α=5.0, l1=0.7, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[282/294] Testing ElasticNet(α=5.0, l1=0.7, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[283/294] Testing ElasticNet(α=5.0, l1=0.9, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[284/294] Testing ElasticNet(α=5.0, l1=0.9, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[285/294] Testing ElasticNet(α=10.0, l1=0.1, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[286/294] Testing ElasticNet(α=10.0, l1=0.1, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[287/294] Testing ElasticNet(α=10.0, l1=0.3, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[288/294] Testing ElasticNet(α=10.0, l1=0.3, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[289/294] Testing ElasticNet(α=10.0, l1=0.5, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[290/294] Testing ElasticNet(α=10.0, l1=0.5, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[291/294] Testing ElasticNet(α=10.0, l1=0.7, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[292/294] Testing ElasticNet(α=10.0, l1=0.7, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+[293/294] Testing ElasticNet(α=10.0, l1=0.9, std=True)... IC=0.0000, IR=0.47, PMR=0.67 
+[294/294] Testing ElasticNet(α=10.0, l1=0.9, std=False)... IC=0.0000, IR=0.47, PMR=0.67 
+
+
+================================================================================
+GRID SEARCH RESULTS SUMMARY
+================================================================================
+
+Full results saved to: warehouse/ic/model_grid_search_20251119_104103.csv
+
+No Hard IC candidates found.
+
+
+### Top 10 Configurations by IC ###
+
+ H      model  alpha  l1_ratio  standardize       IC       IR      PMR  is_hard
+ 1      Lasso   0.01       NaN        False 0.018989 3.730513 1.000000    False
+ 1 ElasticNet   0.01       0.9        False 0.018989 3.730513 1.000000    False
+ 1 ElasticNet   0.10       0.1        False 0.018989 3.730513 1.000000    False
+ 1 ElasticNet   0.01       0.5        False 0.006488 0.279812 0.666667    False
+ 1 ElasticNet   0.01       0.7        False 0.006046 0.264667 0.750000    False
+ 2 ElasticNet   0.10       0.3        False 0.005973 0.577350 0.250000    False
+ 1 ElasticNet   0.01       0.3        False 0.005165 0.231181 0.666667    False
+ 2 ElasticNet   0.10       0.1        False 0.004953 0.124122 0.666667    False
+ 2 ElasticNet   0.01       0.7        False 0.004953 0.124122 0.666667    False
+ 2 ElasticNet   0.01       0.9        False 0.004953 0.124122 0.666667    False
+
+### Best Configuration per Horizon ###
+
+H=1: Lasso(α=0.01, l1=N/A, std=False) → IC=0.0190, PMR=1.00
+H=2: ElasticNet(α=0.1, l1=0.3, std=False) → IC=0.0060, PMR=0.25
+H=3: Lasso(α=0.01, l1=N/A, std=False) → IC=0.0046, PMR=0.67
+
+### Standardization Impact ###
+
+Average IC with standardization: -0.0010
+Average IC without standardization: 0.0001
+Difference: -0.0011 (Raw features better)
+
+### Model Performance Comparison ###
+
+                mean       std       max
+model                                   
+ElasticNet  0.000624  0.002280  0.018989
+Lasso       0.000679  0.003071  0.018989
+Ridge      -0.006732  0.005452 -0.000141
+
+================================================================================
+GRID SEARCH COMPLETE! End time: 2025-11-19 10:41:03
+================================================================================
