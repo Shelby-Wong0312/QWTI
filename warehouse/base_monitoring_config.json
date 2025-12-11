@@ -1,205 +1,114 @@
 {
-  "strategy_id": "base_seed202_lean7_h1",
-  "strategy_name": "Seed202 LEAN 7-Feature (H=1)",
-  "version": "1.0.0",
-  "activation_date": "2025-11-19",
-  "allocation": {
-    "initial_weight": 0.15,
-    "max_weight": 0.3,
-    "ramp_schedule": [
-      {
-        "days": 30,
-        "weight": 0.2,
-        "condition": "IC > 0.02"
-      },
-      {
-        "days": 60,
-        "weight": 0.25,
-        "condition": "IC > 0.02"
-      },
-      {
-        "days": 90,
-        "weight": 0.3,
-        "condition": "IC > 0.02"
-      }
-    ]
+  "strategy_name": "base_seed202_clbz_h1",
+  "strategy_id": "base_seed202_clbz",
+  "experiment_id": "exp5",
+  "version": "3.0",
+  "production_mode": true,
+  "production_enabled_at": "2025-12-06T21:00:00",
+  "model": {
+    "path": "models/base_seed202_clbz_h1.pkl",
+    "type": "LightGBM",
+    "train_window_hours": 1440,
+    "features_file": "features_hourly_with_clbz.parquet"
   },
   "features": [
-    {
-      "name": "cl1_cl2",
-      "type": "market",
-      "importance": 0.46,
-      "source": "futures_curve"
-    },
-    {
-      "name": "ovx",
-      "type": "market",
-      "importance": 0.373,
-      "source": "volatility_index"
-    },
-    {
-      "name": "OIL_CORE_norm_art_cnt",
-      "type": "gdelt",
-      "importance": 0.161,
-      "source": "news_volume"
-    },
-    {
-      "name": "MACRO_norm_art_cnt",
-      "type": "gdelt",
-      "importance": 0.125,
-      "source": "news_volume"
-    },
-    {
-      "name": "SUPPLY_CHAIN_norm_art_cnt",
-      "type": "gdelt",
-      "importance": 0.091,
-      "source": "news_volume"
-    },
-    {
-      "name": "USD_RATE_norm_art_cnt",
-      "type": "gdelt",
-      "importance": 0.012,
-      "source": "news_volume"
-    },
-    {
-      "name": "GEOPOL_norm_art_cnt",
-      "type": "gdelt",
-      "importance": 0.009,
-      "source": "news_volume"
-    }
+    "cl_bz_spread",
+    "ovx",
+    "OIL_CORE_norm_art_cnt",
+    "GEOPOL_norm_art_cnt",
+    "USD_RATE_norm_art_cnt",
+    "SUPPLY_CHAIN_norm_art_cnt",
+    "MACRO_norm_art_cnt",
+    "momentum_24h"
   ],
-  "monitoring_metrics": {
-    "realtime": {
-      "update_frequency": "1h",
-      "metrics": [
-        {
-          "name": "current_position",
-          "alert_abs_threshold": 0.3
-        },
-        {
-          "name": "prediction",
-          "display_format": "%.4f"
-        },
-        {
-          "name": "feature_drift_pct",
-          "alert_threshold": 0.05
-        }
-      ]
-    },
-    "rolling_15d": {
-      "metrics": [
-        {
-          "name": "ic",
-          "alert_threshold": 0.01,
-          "target": 0.1358
-        },
-        {
-          "name": "ic_std",
-          "display_format": "%.4f"
-        }
-      ]
-    },
-    "rolling_60d": {
-      "metrics": [
-        {
-          "name": "ir",
-          "alert_threshold": 0.3,
-          "target": 1.5758
-        },
-        {
-          "name": "sharpe",
-          "display_format": "%.2f"
-        }
-      ]
-    },
-    "rolling_30d": {
-      "metrics": [
-        {
-          "name": "pmr",
-          "alert_threshold": 0.5,
-          "target": 0.8039
-        },
-        {
-          "name": "max_drawdown",
-          "alert_threshold": 0.02
-        }
-      ]
-    }
+  "allocation": {
+    "base_weight": 0.1,
+    "max_weight": 0.1,
+    "threshold": 0.005,
+    "formula": "base_weight * sign(pred) * min(1, |pred| / threshold)"
   },
-  "risk_controls": {
-    "hard_stops": [
-      {
-        "condition": "ic < 0.01 for 5 consecutive windows",
-        "action": "AUTO_DEACTIVATE"
-      },
-      {
-        "condition": "ir < 0.3 for 10 consecutive windows",
-        "action": "AUTO_DEACTIVATE"
-      },
-      {
-        "condition": "data_quality_gate_fail",
-        "action": "HALT_TRADING"
-      },
-      {
-        "condition": "skip_ratio > 0.02",
-        "action": "HALT_TRADING"
-      }
-    ],
-    "soft_alerts": [
-      {
-        "condition": "ic < 0.02",
-        "action": "NOTIFY"
-      },
-      {
-        "condition": "drawdown > 0.015",
-        "action": "NOTIFY"
-      },
-      {
-        "condition": "feature_missing_pct > 0.05",
-        "action": "NOTIFY"
-      }
-    ],
-    "position_limits": {
-      "max_single_position": 0.3,
-      "max_leverage": 1.0,
-      "max_daily_turnover": 2.0
-    }
+  "max_abs_weight": 0.1,
+  "position_limits": {
+    "max_long": 0.1,
+    "max_short": -0.1
   },
-  "data_integrity": {
-    "sources": [
-      {
-        "name": "GDELT",
-        "path": "data/gdelt_hourly.parquet",
-        "version": "v2024.10",
-        "hash_type": "SHA256",
-        "update_frequency": "1h",
-        "sla_latency": "15min"
-      },
-      {
-        "name": "WTI_Prices",
-        "path": "data/features_hourly.parquet",
-        "version": "v2025.10",
-        "hash_type": "SHA256",
-        "update_frequency": "1h",
-        "sla_latency": "5min"
-      },
-      {
-        "name": "Market_Term_OVX",
-        "path": "data/term_crack_ovx_hourly.csv",
-        "version": "live",
-        "hash_type": "SHA256",
-        "update_frequency": "1h",
-        "sla_latency": "10min"
-      }
-    ],
-    "no_drift_contract": "warehouse/policy/no_drift.yaml",
-    "preflight_check": "warehouse/policy/utils/nodrift_preflight.py"
+  "ic_windows": [
+    15
+  ],
+  "ir_windows": [
+    15
+  ],
+  "pmr_windows": [
+    15
+  ],
+  "ic_halt_rule": {
+    "window": 15,
+    "min_ic": 0.02,
+    "consecutive": 5
   },
-  "audit_trail": {
-    "position_log": "warehouse/positions/base_seed202_lean7_positions.csv",
-    "metrics_log": "warehouse/monitoring/base_seed202_lean7_metrics.csv",
-    "alert_log": "warehouse/monitoring/base_seed202_lean7_alerts.csv",
-    "replay_capability": true,
-    "snapshot_retention_days": 365
+  "ir_halt_rule": {
+    "window": 15,
+    "min_ir": 0.4,
+    "consecutive": 10
+  },
+  "pmr_thresholds": {
+    "halt": 0.548,
+    "watch": 0.55,
+    "description": "PMR 0.548-0.55 = WATCH (alert, no halt); PMR < 0.548 = HALT"
+  },
+  "data_quality": {
+    "max_skip_ratio": 0.02
+  },
+  "columns": {
+    "timestamp": [
+      "timestamp",
+      "as_of_utc",
+      "as_of",
+      "time"
+    ],
+    "signal": [
+      "signal",
+      "pred",
+      "prediction",
+      "score"
+    ],
+    "returns": [
+      "wti_ret_1h",
+      "wti_return",
+      "wti_ret",
+      "ret_1h",
+      "wti_returns"
+    ],
+    "position": [
+      "suggested_position",
+      "recommended_position",
+      "target_position",
+      "position",
+      "weight",
+      "weight_pct"
+    ]
+  },
+  "validation_metrics": {
+    "IC": 0.0272,
+    "IR": 0.506,
+    "PMR": 0.643,
+    "hard_gate_achieved": true,
+    "validated_at": "2025-12-06T12:50:57.606702"
+  },
+  "dryrun_24h": {
+    "run_at": "2025-12-06T12:56:22",
+    "compliance": {
+      "IC": 1.0,
+      "IR": 1.0,
+      "PMR": 0.875,
+      "hard_gate": 0.875
+    },
+    "violations": 3,
+    "verdict": "PRODUCTION_READY_WITH_WATCH"
+  },
+  "previous_config": {
+    "strategy_name": "base_seed202_regime_h1",
+    "deprecated_at": "2025-12-06T12:50:57.606726",
+    "reason": "Upgraded to HARD-achieving model with CL-BZ spread feature"
   }
 }

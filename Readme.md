@@ -149,6 +149,17 @@
   * `cl1_cl2 + ovx` ≈ 83% 的重要性 → 市場結構與波動是主訊號來源
   * 5 個 GDELT 桶合計約 17% → 新聞當「輔助 signal」，不是主因。
 
+## 3.2 新訓練計畫（2024/10–2025/11 全覆蓋）
+
+* 覆蓋資料：`data/gdelt_hourly.parquet`（至 2025-11-30）＋ `data/features_hourly.parquet`（至 2025-12-01）＋ `data/term_crack_ovx_hourly.csv`（需補齊至 2025-11）整併為 `features_hourly_with_term.parquet`。
+* 主要模型：
+  * **Base**：`base_seed202_lean7_h1` LightGBM（7 特徵、lag=1h、H=1），重算 IC/IR/PMR、穩定性。
+  * **Stacking**：3×LightGBM ensemble（H=1），重做長期窗口穩定性（IC/IR/PMR + 回測 PnL）。
+  * **Regime / 非線性**：含 term/crack/ovx 的 LightGBM/XGB，檢測窗口長短與正則化對 IC/IR 的敏感度。
+  * **H>1 探索**：H=3 版本加入季節性 / 事件旗標（EIA/OPEC 事件窗），驗證 IC 是否能達 Hard。
+* 檢驗口徑：全程 lag=1h，不跨 Hard Gate；報表輸出 `warehouse/ic/*.csv`、`warehouse/monitoring/*`，並繪圖到 `output/visualizations/`。
+* 唯一下步建議行動：執行 `python3 stability_validation_best_lightgbm.py` 以最新 2024/10–2025/11 資料重算 `base_seed202_lean7_h1` 的 IC/IR/PMR 與穩定性，結果將寫入 `warehouse/ic/`。
+
 ---
 
 # 4. 日內運行與監控（Hourly Monitor）
@@ -462,6 +473,19 @@ Day 2 不一定要立刻做，但可以預先規劃：
 * 將 Dashboard 容器化（Docker），改用 ECS / Fargate 或 Cloud Run 類似服務（後續專案）。
 * 接上 SNS / Email / Line Bot 等告警通知（CRITICAL alert 觸發時）。
 * 多策略支援：Base + Shadow 策略在同一 Dashboard 上切換。
+
+---
+
+# 10. EC2 部署紀錄（2025-12-06~07）
+
+* **環境**：t3.micro / Amazon Linux 2023 / Python 3.9.24，Root 30GB gp3，Public IP 3.236.235.113，目錄 `~/wti`
+* **Cron**：
+  * Hourly（:05 UTC）：`bash jobs/run_hourly_monitor_and_email.sh >> ~/wti/logs/hourly_pipeline.log`
+  * Daily（12:00 UTC）：`set -a && source .env && set +a && /usr/bin/python3 convert_runlog.py && /usr/bin/python3 send_daily_email.py >> ~/wti/logs/daily_email.log`
+* **Hourly 流程**：WTI 抓價（run_capital_refresh.sh）→ GDELT RAW + 聚合 → 合併 parquet → hourly_monitor（IC/IR/PMR）→ convert_runlog → send_hourly_email
+* **資產**：`models/base_seed202_clbz_h1.pkl`、`features_hourly_with_clbz.parquet`、`.env`（CAPITAL_* + SMTP）、`email_config.json`
+* **現狀**：每小時 / 每日郵件已驗證成功；監控指標 IC/IR/PMR 正常
+* **待辦風險**：GDELT 歷史缺口（2025-06-15~12-05 需 backfill）、features_hourly_with_clbz 尚未全量更新、字型缺失僅影響圖表美觀
 
 ---
 

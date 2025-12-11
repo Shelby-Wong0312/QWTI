@@ -12,8 +12,8 @@ from datetime import datetime
 import json
 
 # Configuration
-BASE_WEIGHT = 0.15  # Initial 15% allocation
-MAX_WEIGHT = 0.30   # Cap at 30% for single strategy
+BASE_WEIGHT = 0.10  # Optimal 10% allocation (from base_weight_scan.py with 5bps cost)
+MAX_WEIGHT = 0.10   # Cap at 10% for single strategy (same as base_weight)
 PREDICTION_THRESHOLD = 0.005  # 0.5% move caps position to full weight
 MAX_DRAWDOWN_ALERT = 0.02  # Alert if drawdown > 2%
 IC_ALERT_THRESHOLD = 0.01  # Alert if rolling IC < 0.01

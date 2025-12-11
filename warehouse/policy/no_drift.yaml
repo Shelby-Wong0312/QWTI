@@ -46,6 +46,7 @@ kpi_reporting:  # 正式報表與看板只看 Hard
 
 source_selection:  # 生效權重來源鎖
   selected_source: "base"          # base | shadow
+  selected_model: "base_seed202_regime_h1"  # v2.0 regime-aware model
   allow_shadow_to_trade: false
   log_field: "selected_source"
 

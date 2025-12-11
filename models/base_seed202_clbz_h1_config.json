@@ -1,0 +1,45 @@
+{
+  "model_name": "base_seed202_clbz_h1",
+  "model_type": "LightGBM",
+  "model_params": {
+    "max_depth": 3,
+    "num_leaves": 7,
+    "learning_rate": 0.05,
+    "subsample": 0.85,
+    "n_estimators": 250,
+    "random_state": 202,
+    "verbosity": -1
+  },
+  "feature_cols": [
+    "cl_bz_spread",
+    "ovx",
+    "OIL_CORE_norm_art_cnt",
+    "GEOPOL_norm_art_cnt",
+    "USD_RATE_norm_art_cnt",
+    "SUPPLY_CHAIN_norm_art_cnt",
+    "MACRO_norm_art_cnt",
+    "momentum_24h"
+  ],
+  "target_col": "wti_returns",
+  "train_hours": 6549,
+  "train_start": "2024-10-01 00:00:00+00:00",
+  "train_end": "2025-11-28 18:00:00+00:00",
+  "created_at": "2025-12-06T12:50:57.605259",
+  "features_file": "features_hourly_with_clbz.parquet",
+  "n_features": 8,
+  "validation_metrics": {
+    "IC": 0.0272,
+    "IR": 0.506,
+    "PMR": 0.643,
+    "n_windows": 14,
+    "train_hours": 1440,
+    "test_hours": 360
+  },
+  "hard_gate_achieved": true,
+  "data_sources": {
+    "gdelt": "data/gdelt_hourly.parquet",
+    "price": "data/features_hourly.parquet",
+    "cl_bz": "Yahoo Finance CL=F, BZ=F",
+    "ovx": "data/term_crack_ovx_hourly.csv"
+  }
+}

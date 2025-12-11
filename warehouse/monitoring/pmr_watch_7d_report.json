@@ -1,0 +1,122 @@
+{
+  "report_generated": "2025-12-06T16:22:11.357583",
+  "model": "models\\base_seed202_clbz_h1.pkl",
+  "period": {
+    "start": "2025-11-19 01:00:00+00:00",
+    "end": "2025-11-28 18:00:00+00:00",
+    "total_hours": 168
+  },
+  "overall_metrics": {
+    "ic_mean": 0.3554510889257361,
+    "ic_std": 0.01774592292206281,
+    "ic_min": 0.3076319235934366,
+    "ic_max": 0.39106800485392795,
+    "ir_mean": 5.8461388098777185,
+    "ir_std": 2.7708447890069303,
+    "ir_min": 1.743110729863591,
+    "ir_max": 18.630477727101713,
+    "pmr_mean": 0.5775772806395677,
+    "pmr_std": 0.010600589679468546,
+    "pmr_min": 0.5536723163841808,
+    "pmr_max": 0.5939086294416244
+  },
+  "compliance": {
+    "ic_compliance": 1.0,
+    "ir_compliance": 1.0,
+    "pmr_compliance": 1.0,
+    "hard_gate_compliance": 1.0
+  },
+  "pmr_zone_distribution": {
+    "NORMAL": 1.0
+  },
+  "liquidity_period_analysis": {
+    "LOW": {
+      "n_hours": 78,
+      "pmr_mean": 0.5778185055463646,
+      "pmr_std": 0.010106722088715395,
+      "pmr_min": 0.5539772727272727,
+      "pmr_compliance": 1.0,
+      "hard_gate_compliance": 1.0,
+      "watch_zone_hours": 0,
+      "halt_zone_hours": 0
+    },
+    "MEDIUM": {
+      "n_hours": 35,
+      "pmr_mean": 0.579659471857166,
+      "pmr_std": 0.009800522370327766,
+      "pmr_min": 0.5619047619047619,
+      "pmr_compliance": 1.0,
+      "hard_gate_compliance": 1.0,
+      "watch_zone_hours": 0,
+      "halt_zone_hours": 0
+    },
+    "HIGH": {
+      "n_hours": 55,
+      "pmr_mean": 0.5759101490878205,
+      "pmr_std": 0.011647703334881123,
+      "pmr_min": 0.5536723163841808,
+      "pmr_compliance": 1.0,
+      "hard_gate_compliance": 1.0,
+      "watch_zone_hours": 0,
+      "halt_zone_hours": 0
+    }
+  },
+  "day_of_week_analysis": {
+    "Mon": {
+      "n_hours": 23,
+      "pmr_mean": 0.5843965264346451,
+      "hard_gate_compliance": 1.0
+    },
+    "Tue": {
+      "n_hours": 23,
+      "pmr_mean": 0.5855757013271272,
+      "hard_gate_compliance": 1.0
+    },
+    "Wed": {
+      "n_hours": 45,
+      "pmr_mean": 0.5765821303082602,
+      "hard_gate_compliance": 1.0
+    },
+    "Thu": {
+      "n_hours": 44,
+      "pmr_mean": 0.5742699262218547,
+      "hard_gate_compliance": 1.0
+    },
+    "Fri": {
+      "n_hours": 32,
+      "pmr_mean": 0.5726336866707449,
+      "hard_gate_compliance": 1.0
+    },
+    "Sun": {
+      "n_hours": 1,
+      "pmr_mean": 0.5852713178294574,
+      "hard_gate_compliance": 1.0
+    }
+  },
+  "violation_analysis": {
+    "total_violations": 0,
+    "violation_rate": 0.0,
+    "pmr_violations": 0,
+    "ic_violations": 0,
+    "ir_violations": 0
+  },
+  "low_liquidity_focus": {
+    "n_hours": 78,
+    "pmr_mean": 0.5778185055463646,
+    "pmr_std": 0.010106722088715395,
+    "violations_in_low_liq": 0,
+    "pct_of_all_violations": 0
+  },
+  "stability_assessment": {
+    "verdict": "STABLE",
+    "is_stable": "True",
+    "recommendation": "Model stable for 7 days. Ready to lock as long-term base."
+  },
+  "thresholds": {
+    "IC": 0.02,
+    "IR": 0.5,
+    "PMR": 0.55,
+    "PMR_WATCH": 0.55,
+    "PMR_HALT": 0.548
+  }
+}

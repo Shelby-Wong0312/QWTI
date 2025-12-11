@@ -1,0 +1,51 @@
+{
+  "run_timestamp": "2025-12-06T12:56:22.404829",
+  "model": "models\\base_seed202_clbz_h1.pkl",
+  "features": "features_hourly_with_clbz.parquet",
+  "strategy_name": "base_seed202_clbz_h1",
+  "version": "3.0",
+  "simulation_hours": 24,
+  "lookback_hours": 360,
+  "final_metrics": {
+    "IC": NaN,
+    "IR": 0,
+    "PMR": 0.555
+  },
+  "thresholds": {
+    "IC": 0.02,
+    "IR": 0.5,
+    "PMR": 0.55
+  },
+  "compliance": {
+    "IC": 1.0,
+    "IR": 1.0,
+    "PMR": 0.875,
+    "hard_gate": 0.875
+  },
+  "n_violations": 3,
+  "violations": [
+    {
+      "hour": 18,
+      "timestamp": "2025-11-28 03:00:00+00:00",
+      "ic": 0.2867998792216234,
+      "ir": 1.6947835345333482,
+      "pmr": 0.5482625482625483
+    },
+    {
+      "hour": 20,
+      "timestamp": "2025-11-28 14:00:00+00:00",
+      "ic": 0.2833910235430755,
+      "ir": 1.6459754728553035,
+      "pmr": 0.5478927203065134
+    },
+    {
+      "hour": 21,
+      "timestamp": "2025-11-28 15:00:00+00:00",
+      "ic": 0.2876489627739531,
+      "ir": 2.5238256972247237,
+      "pmr": 0.549618320610687
+    }
+  ],
+  "pass": false,
+  "ready_for_production": false
+}

@@ -1,0 +1,12 @@
+5 2 * * *  cd /home/ec2-user/Data && jobs/run_gdelt_daily_refresh.sh >> logs/gdelt_daily.log 2>&1
+35 2 * * * cd /home/ec2-user/Data && jobs/run_gdelt_parquet_refresh.sh >> logs/gdelt_parquet_daily.log 2>&1
+45 2 * * * cd /home/ec2-user/Data && jobs/run_daily_email.sh >> logs/daily_email.log 2>&1
+
+# ?????????? GDELT RAW + ALL bucket ??
+5 * * * *  cd /home/ec2-user/Data && jobs/run_gdelt_hourly_incremental.sh >> logs/gdelt_hourly_gdelt.log 2>&1
+
+# ??????? monthly parquet ?? gdelt_hourly.parquet + gdelt_hourly.csv
+7 * * * *  cd /home/ec2-user/Data && jobs/run_gdelt_parquet_refresh.sh >> logs/gdelt_parquet_hourly.log 2>&1
+
+# ????? IR/PMR/IC + ??? email?send_hourly_email.py?
+10 * * * * cd /home/ec2-user/Data && jobs/run_hourly_monitor_and_email.sh >> logs/hourly_monitor.log 2>&1

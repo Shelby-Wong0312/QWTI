@@ -107,7 +107,12 @@ print(f"   OK Preflight: timezone check passed")
 print("\n[2/9] Finding longest continuous segment...")
 merged = merged.sort_values('ts_utc').reset_index(drop=True)
 merged['time_diff'] = merged['ts_utc'].diff().dt.total_seconds() / 3600
-merged['is_gap'] = merged['time_diff'] > 1.5
+# Allow regular market closures:
+# - Daily halt: 2h (20:00-22:00 UTC)
+# - Weekend: ~50h (Fri 20:00 ~ Sun 22:00 UTC)
+# - Holidays: up to ~75h
+# Only flag truly abnormal gaps > 80h (GDELT data gaps)
+merged['is_gap'] = merged['time_diff'] > 80
 
 segment_ids = merged['is_gap'].cumsum()
 segment_lengths = segment_ids.value_counts().sort_index()
